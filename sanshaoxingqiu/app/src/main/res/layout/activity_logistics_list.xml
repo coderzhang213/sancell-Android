@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rcv_logistics"
+    android:background="@color/color_stroke5"
+    tools:context="cn.sancell.xingqiu.homeuser.LogisticsListActivity" />
+
+    <include layout="@layout/activity_logistics_info"></include>
+</FrameLayout>

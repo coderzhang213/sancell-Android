@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_white_8"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@color/color_f1f1f1"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/color_f1f1f1"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:viewAspectRatio="1" />
+
+    <ImageView
+        android:id="@+id/iv_ranking_mark"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_alignLeft="@+id/sdv_pic"
+        android:layout_alignTop="@+id/sdv_pic" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sdv_pic"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="意大利珍藏干红葡萄酒酒"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_tags_title"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="武夷山丨茶叶"
+        android:textColor="@color/color_text4"
+        android:textSize="@dimen/sp_11" />
+
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_tags_title"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_18"
+        fresco:startText="¥"
+        fresco:start_proportion="0.7"
+        fresco:start_text_color="@color/color_theme" />
+
+    <TextView
+        android:id="@+id/tv_not_member_price_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_price"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/tv_price"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:text="起"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_price_orig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_price"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_12" />
+
+</RelativeLayout>

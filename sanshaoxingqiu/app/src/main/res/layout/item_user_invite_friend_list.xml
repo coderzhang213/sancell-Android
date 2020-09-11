@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/riv_invitees_photo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="8dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_default_photo"
+            fresco:failureImage="@mipmap/icon_default_photo"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@mipmap/icon_default_photo"
+            fresco:placeholderImageScaleType="fitXY"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tv_invitees_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_toRightOf="@+id/riv_invitees_photo"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxWidth="135dp"
+            android:maxLines="1"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_15"
+            tools:text="树树树" />
+
+        <TextView
+            android:layout_marginTop="22dp"
+            android:id="@+id/iv_invitees_level"
+            android:layout_width="46dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/tv_invitees_name"
+            android:background="@drawable/home_levle_bg"
+            android:gravity="center"
+            android:text="普通用户"
+            android:textColor="#E6B27E"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_invitees_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/riv_invitees_photo"
+            android:layout_toRightOf="@+id/riv_invitees_photo"
+            android:includeFontPadding="false"
+            android:textColor="@color/item_color"
+            android:textSize="@dimen/sp_14"
+            tools:text="ID：" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_invite_time"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_invitees_id"
+            android:layout_alignStart="@+id/tv_invitees_id"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/item_color"
+            android:textSize="14sp"
+            tools:text="2019-11-11" />
+
+        <cn.sancell.xingqiu.widget.RelativeSizeTextView
+            android:id="@+id/tv_invite_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="16dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_18"
+            fresco:startText="¥"
+            fresco:start_proportion="01"
+            fresco:start_text_color="@color/color_text1" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_income_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/riv_invitees_photo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:includeFontPadding="false"
+            android:text="邀请收益"
+            android:textColor="@color/item_color"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="64dp"
+        android:background="#FFE8EAED" />
+</LinearLayout>

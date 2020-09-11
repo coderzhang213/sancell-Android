@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="13dp"
+    android:paddingTop="15dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/riv_user_photo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginRight="8dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_default_photo"
+        fresco:failureImage="@mipmap/icon_default_photo"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@mipmap/icon_default_photo"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/riv_user_photo"
+        android:includeFontPadding="false"
+        android:text="萧筱"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <ImageView
+        android:id="@+id/iv_member_level"
+        android:layout_width="41dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/tv_user_name" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/riv_user_photo"
+        android:layout_toRightOf="@+id/riv_user_photo"
+        android:text="2019 - 06﹣20"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_11" />
+
+    <com.yetland.ratingbar.DtRatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        app:rating_check="4"
+        app:rating_height="12"
+        app:rating_padding_left="2"
+        app:rating_padding_right="2"
+        app:rating_star_img="@mipmap/icon_productinfo_star_full"
+        app:rating_support_half="false"
+        app:rating_un_star_img="@mipmap/icon_productinfo_star_empty"
+        app:rating_width="12" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/riv_user_photo"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/riv_user_photo"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_13" />
+
+    <ImageView
+        android:id="@+id/iv_open_close"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_below="@+id/tv_content"
+        android:layout_toRightOf="@+id/riv_user_photo"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:scaleType="fitStart"
+        android:src="@mipmap/icon_productinfo_evaluate_open" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_pic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/iv_open_close"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/riv_user_photo"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@color/color_f1f1f1"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/color_f1f1f1"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="4dp"
+        fresco:viewAspectRatio="1" />
+
+    <cn.sancell.xingqiu.widget.CusGridView
+        android:id="@+id/gv_pics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_open_close"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/riv_user_photo"
+        android:horizontalSpacing="4dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="4dp"></cn.sancell.xingqiu.widget.CusGridView>
+
+
+</RelativeLayout>

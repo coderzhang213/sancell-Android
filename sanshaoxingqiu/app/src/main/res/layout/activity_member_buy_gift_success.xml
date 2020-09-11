@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.sancell.xingqiu.usermember.MemberBuyGiftSuccessActivity">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_member_center_bg" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_bg"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_member_down_bg" />
+
+    <View
+        android:id="@+id/view_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="452dp"
+        android:background="@drawable/round_color_stroke5_8" />
+
+    <cn.sancell.xingqiu.widget.CusScrollview
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="80dp">
+
+            <ImageView
+                android:id="@+id/top_mark"
+                android:layout_width="272dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/icon_member_buy_success" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_mark"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="礼包购买成功"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_24" />
+
+            <TextView
+                android:id="@+id/tv_tip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_tip"
+                android:layout_centerHorizontal="true"
+                android:text="礼包相关信息请至个人中心「我的会员礼包」查看"
+                android:textColor="@color/color_text6"
+                android:textSize="@dimen/sp_12" />
+
+            <!--<com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_memberlevel_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_tip1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@color/color_stroke5"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@color/color_stroke5"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:viewAspectRatio="1.57" />-->
+
+            <ImageView
+                android:id="@+id/sdv_memberlevel_card"
+                android:layout_width="315dp"
+                android:layout_height="188dp"
+                android:layout_below="@+id/tv_tip1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/tv_member_level_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/sdv_memberlevel_card"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/color_text1"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_member_valid_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sdv_memberlevel_card"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/color_text1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_inviter_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/sdv_memberlevel_card">
+
+                <RelativeLayout
+                    android:id="@+id/rl_edit_id"
+                    android:layout_width="315dp"
+                    android:layout_height="188dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/round_white_8"
+                    android:paddingTop="28dp">
+
+                    <TextView
+                        android:id="@+id/tv_tip2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:includeFontPadding="false"
+                        android:text="请填写"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_tip2"
+                        android:layout_marginLeft="36dp"
+                        android:text="邀请人ID"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_13" />
+
+                    <EditText
+                        android:id="@+id/ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="36dp"
+                        android:layout_toRightOf="@+id/tv_tip2"
+                        android:background="@null"
+                        android:cursorVisible="true"
+                        android:gravity="center"
+                        android:hint="请输入"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:textColor="@color/color_text1"
+                        android:textColorHint="@color/color_stroke1"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="@dimen/sp_16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/ed_id"
+                        android:layout_alignRight="@+id/ed_id"
+                        android:layout_below="@+id/ed_id"
+                        android:background="@color/color_stroke3" />
+
+                    <TextView
+                        android:id="@+id/btn_sure"
+                        android:layout_width="256dp"
+                        android:layout_height="52dp"
+                        android:layout_below="@+id/ed_id"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@mipmap/icon_sure_inviter"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:text="@string/sure"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_sure"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="跳过此步后续将无法再次进行添加"
+                        android:textColor="@color/color_text3"
+                        android:textSize="@dimen/sp_12" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_inviter_info"
+                    android:layout_width="315dp"
+                    android:layout_height="188dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/round_white_8"
+                    android:paddingLeft="36dp"
+                    android:paddingRight="36dp"
+                    android:paddingTop="28dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_tip4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="我的邀请人"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_16" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/riv_inviter_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/tv_tip4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_default_photo"
+                        fresco:failureImage="@mipmap/icon_default_photo"
+                        fresco:failureImageScaleType="fitXY"
+                        fresco:placeholderImage="@mipmap/icon_default_photo"
+                        fresco:placeholderImageScaleType="fitXY"
+                        fresco:roundAsCircle="true" />
+
+                    <TextView
+                        android:id="@+id/tv_inviter_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/riv_inviter_photo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="我的邀请人"
+                        android:textColor="@color/color_text6"
+                        android:textSize="@dimen/sp_13" />
+
+                    <TextView
+                        android:id="@+id/tv_inviter_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_inviter_name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:text="ID:"
+                        android:textColor="@color/color_text6"
+                        android:textSize="@dimen/sp_13" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btn_parcelId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_inviter_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="40dp"
+                android:text="查看订单详情"
+                android:textColor="@color/color_text3"
+                android:textSize="@dimen/sp_13" />
+
+        </RelativeLayout>
+    </cn.sancell.xingqiu.widget.CusScrollview>
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorTran">
+
+
+        <ImageView
+            android:id="@+id/btn_back_black"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_finish_black" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_finish_white" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="购买成功"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_title_black"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="会员中心"
+            android:textColor="@color/color_text1_tranall"
+            android:textSize="@dimen/sp_15" />
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/network_error"
+        layout="@layout/layout_error_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:visibility="gone" />
+
+</RelativeLayout>

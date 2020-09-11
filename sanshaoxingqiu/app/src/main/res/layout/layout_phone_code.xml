@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <EditText
+        android:id="@+id/ed_login_mobile"
+        style="@style/editText_phone"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginTop="40dp"/>
+
+    <ImageView
+        android:id="@+id/iv_clear"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_login_mobile"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ed_login_mobile"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_delete_phone"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ed_login_mobile"
+        android:background="@color/color_E5E6E5" />
+
+    <EditText
+        android:id="@+id/ed_code"
+        style="@style/editText_code"
+        android:layout_below="@+id/view_line"
+        android:layout_toLeftOf="@+id/btn_getcode" />
+
+
+    <ImageView
+        android:id="@+id/iv_clear_code"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_code"
+        android:layout_alignTop="@+id/ed_code"
+        android:layout_toLeftOf="@+id/btn_getcode"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_delete_phone"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/btn_getcode"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_code"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ed_code"
+        android:layout_below="@+id/ed_login_mobile"
+        android:gravity="center"
+        android:text="@string/send_code_tip"
+        android:textColor="@color/color_text4"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:id="@+id/view_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ed_code"
+        android:background="@color/color_E5E6E5" />
+
+</merge>

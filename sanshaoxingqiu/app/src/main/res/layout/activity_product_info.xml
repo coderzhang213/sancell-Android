@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="cn.sancell.xingqiu.homeclassify.ProductInfoActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorTran">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_black_back" />
+
+
+        <ImageView
+            android:id="@+id/btn_share"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_productinfo_share"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_guide"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorTran"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_guide_product"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="商品"
+                android:textColor="@color/colorTran"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/tv_guide_parameter"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="参数"
+                android:textColor="@color/colorTran"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/tv_guide_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="@color/colorTran"
+                android:textSize="@dimen/sp_13" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bome"
+        android:layout_below="@+id/rl_top" />
+
+    <ImageView
+        android:id="@+id/iv_one_yuan_share_tip_gif"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/rl_top"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-17dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_share_tip_gif"
+        android:layout_width="146dp"
+        android:layout_height="54dp"
+        android:layout_alignTop="@+id/rl_top"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-7dp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_bome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_is_to_address"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="#50FFF3C3"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_ps_alter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="非常抱歉，该商品在该区域不支持销售"
+                android:textColor="#FAC800"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_available_purchase"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+
+            android:background="@color/colorWhite">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_stroke3" />
+
+            <LinearLayout
+                android:id="@+id/ll_contact"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/line"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@mipmap/icon_productinfo_chat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="客服"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_9" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_car"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/line"
+                android:layout_toRightOf="@+id/ll_contact"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_shop_car"
+                    android:layout_width="18dp"
+                    android:layout_height="17dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/icon_productinfo_car" />
+
+                <ImageView
+                    android:id="@+id/iv_car_red_point"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_toRightOf="@+id/iv_shop_car"
+                    android:src="@drawable/oval_color_function_error"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_shop_car"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="购物车"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_9" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_add_car"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@+id/rl_car"
+                android:background="@drawable/round_359157_18"
+                android:gravity="center"
+                android:text="加入购物车"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_invalid_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_stroke3" />
+
+        <TextView
+            android:layout_width="343dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/line1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/theme_btn_click_style"
+            android:gravity="center"
+            android:text="购礼包领取猩球VIP"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/riv_goodsDetailImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@color/color_stroke4"
+        android:visibility="invisible"
+        fresco:failureImage="@color/color_stroke4"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/color_stroke4"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundAsCircle="true"
+        fresco:viewAspectRatio="1" />
+
+    <include
+        android:id="@+id/network_error"
+        layout="@layout/layout_error_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

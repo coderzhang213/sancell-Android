@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/round_white_12"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_purchase_gain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/shape_black_dot"
+        android:drawablePadding="5dp"
+        android:textColor="@color/text_main"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:text="购买当前超值医美产品，赠送一星粉丝资格" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_fans_gain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/shape_black_dot"
+        android:drawablePadding="5dp"
+        android:textColor="@color/text_main"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:text="医美粉丝推荐普通用户升级成新医美粉丝，将获得分成" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_fans_gain_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="4dp"
+        android:lineSpacingExtra="4dp"
+        tools:text="您为一星粉丝，将获得 ¥28.90 \n 您为二星粉丝，将获得 ¥37.24 \n 您为三级粉丝，将获得 ¥43.22" />
+
+
+</LinearLayout>

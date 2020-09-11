@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:background="@color/transparent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/icon_become_fans_bg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        android:text="恭喜您"
+        android:textColor="#FFCC99"
+        android:textSize="24sp" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_cher"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_hor_line"
+        android:textColor="#FFCC99" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_fans_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="#FFCC99"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="成为三少医美一星粉丝" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_bg"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/icon_become_fans_close" />
+
+</RelativeLayout>

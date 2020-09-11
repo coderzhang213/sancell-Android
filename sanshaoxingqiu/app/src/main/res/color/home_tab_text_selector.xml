@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2012 Square, Inc. -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:state_selected="true" android:color="#FA1905"/>
+    <item android:state_pressed="true" android:color="#FA1905"/>
+    <item android:color="#B1B2B3"/>
+
+</selector>

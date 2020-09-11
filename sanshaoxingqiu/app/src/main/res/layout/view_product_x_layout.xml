@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="2dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="2dp">
+
+<!--    <ImageView-->
+<!--        android:layout_width="11dp"-->
+<!--        android:layout_height="11dp"-->
+<!--        android:src="@mipmap/icon_order_complete" />-->
+
+    <TextView
+        android:id="@+id/tv_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/tv_conent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:text="7天无理由退换货"
+        android:textColor="@color/color_text2"
+        android:textSize="13sp" />
+</LinearLayout>

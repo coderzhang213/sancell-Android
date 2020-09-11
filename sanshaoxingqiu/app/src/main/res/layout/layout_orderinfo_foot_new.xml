@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="72dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:paddingBottom="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_code_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="核销码"
+            android:textColor="@color/text_main"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_use_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_code_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:text="待使用"
+            android:textColor="@color/color_coupon_code_use_state"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_look_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_code_title"
+            android:layout_alignStart="@+id/tv_code_title"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/selecotr_order_coupon_state"
+            android:paddingLeft="16dp"
+            android:paddingTop="6dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="6dp"
+            android:text="查看券码信息"
+            android:textColor="@color/color_order_coupon_look_state"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hospital"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_hospital_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawableRight="@mipmap/icon_more_unusable_couponlist"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:text="乔丽尔乔丽尔乔丽尔乔丽尔"
+            android:textColor="@color/text_main"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_hospital_adr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hospital_name"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:layout_toLeftOf="@+id/ll_phone"
+            android:maxLines="2"
+            android:text="上海虹口区水电路1388号晟柏路1388号晟柏科技电晟柏科"
+            android:textColor="#7C7D80"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toLeftOf="@+id/ll_phone"
+            android:background="#D4D6D9" />
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_call_common" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_phone"
+                android:text="联系机构"
+                android:textColor="@color/text_main"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_orderinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorWhite"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/tv_ordernum_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignBaseline="@+id/tv_ordernum_copy"
+            android:layout_alignStart="@+id/tv_ordertime_tip"
+            android:layout_alignBottom="@+id/tv_ordernum_copy"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/orderinfo_ordernum"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_order_num"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignBaseline="@+id/tv_ordernum_copy"
+            android:layout_alignBottom="@+id/tv_ordernum_copy"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_ordernum_tip"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="20190620SSSSS22222"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_ordernum_copy"
+            android:layout_width="23dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/tv_order_num"
+            android:background="@drawable/round_stroke12"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/orderinfo_copy"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_9" />
+
+
+        <TextView
+            android:id="@+id/tv_ordertime_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_below="@+id/tv_ordernum_tip"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/orderinfo_ordertime"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_below="@+id/tv_ordernum_tip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/tv_ordertime_tip"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="2019-06-20 12:32:45"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_paytype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ordertime_tip">
+
+            <TextView
+                android:id="@+id/tv_paytype_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/orderinfo_paytype"
+                android:textColor="@color/color_text3"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_pay_type"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/tv_paytype_tip"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="微信"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_paytime_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_below="@+id/tv_paytype_tip"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/orderinfo_paytime"
+                android:textColor="@color/color_text3"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_pay_time"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_below="@+id/tv_paytype_tip"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/tv_paytime_tip"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="2019-06-20 12:35:27"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorWhite"
+        android:paddingTop="13dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/tv_totalprice_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginLeft="16dp"
+            android:includeFontPadding="false"
+            android:text="@string/orderinfo_totalprice"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_12" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_totalprice"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignBaseline="@+id/tv_totalprice_tip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            tools:text="111111" />
+
+        <TextView
+            android:id="@+id/tv_red_price_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_below="@+id/tv_totalprice_tip"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="红包抵扣"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_12" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_red_price"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignBaseline="@+id/tv_red_price_tip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            tools:text="11111" />
+
+        <TextView
+            android:id="@+id/tv_actualprice_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_red_price_tip"
+            android:layout_alignStart="@+id/tv_totalprice_tip"
+            android:layout_marginTop="27dp"
+            android:text="@string/orderinfo_actualprice"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_12" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_new_pay_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_actualprice_tip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textColor="#FA1905"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="200.00" />
+    </RelativeLayout>
+
+
+</LinearLayout>

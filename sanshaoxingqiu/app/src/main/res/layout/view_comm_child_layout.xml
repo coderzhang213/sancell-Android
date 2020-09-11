@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_conent"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <cn.sancell.xingqiu.widget.roundimageview.RoundedImageView
+        android:id="@+id/rl_icon"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_marginTop="10dp"
+        android:minWidth="80dp"
+        android:scaleType="center"
+        android:src="@drawable/default_bg_shape"
+        app:riv_corner_radius_each="10dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="--"
+        android:textColor="#19191A"
+        android:textSize="13sp" />
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_below="@+id/tv_tags_title"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:textColor="@color/rome_text_color"
+        android:textSize="@dimen/sp_16"
+        fresco:startText="¥"
+        fresco:start_proportion="0.66"
+        fresco:start_text_color="@color/rome_text_color" />
+
+    <TextView
+        android:id="@+id/tv_marke_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="0"
+        android:textColor="#BABCBF"
+        android:textSize="12sp" />
+</LinearLayout>

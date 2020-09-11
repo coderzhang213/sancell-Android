@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_item"
+    android:layout_width="160dp"
+    android:layout_height="255dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:background="@mipmap/icon_one_yuan_purchase_item_bg">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_pic"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="4dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sdv_pic"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="@color/color_3E3E3E"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold"
+        tools:text="意大利珍藏干红葡萄酒酒" />
+
+    <cn.sancell.xingqiu.widget.NumberDinRegularTextView
+        android:id="@+id/tv_price_orig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/color_583926"
+        android:textSize="@dimen/sp_13"
+        tools:text="¥66.00" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="82dp"
+        android:layout_height="26dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_color_e12c25_12"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_13"
+        tools:text="立即抢购" />
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignBottom="@+id/tv_status"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="2dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_E55F37"
+        android:textSize="@dimen/sp_18"
+        fresco:end_proportion="0.66"
+        fresco:end_text_color="@color/color_E55F37"
+        fresco:startText="¥"
+        fresco:start_proportion="0.66"
+        fresco:start_text_color="@color/color_E55F37" />
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="24dp">
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:gravity="bottom"
+        android:paddingBottom="2dp"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_14" />
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_month_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_month"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_20"
+        app:end_proportion="0.7"
+        app:end_text_color="@color/color_theme"
+        app:startText="¥"
+        app:start_proportion="0.7"
+        app:start_text_color="@color/color_theme" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/tv_month_total_price"
+        android:gravity="bottom"
+        android:paddingBottom="3dp"
+        android:text="已节省"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/tv_member_price_save_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignLeft="@+id/tv_month_total_price"
+        android:layout_below="@+id/tv_month_total_price"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="会员价节省"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="14dp"
+        android:layout_below="@+id/tv_month_total_price"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/tv_member_price_save_tip" />
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_member_save_price"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_month_total_price"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_16"
+        app:startText="¥"
+        app:start_proportion="1"
+        app:start_text_color="@color/color_theme" />
+
+    <TextView
+        android:id="@+id/tv_red_save_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignLeft="@+id/tv_month_total_price"
+        android:layout_below="@+id/tv_member_price_save_tip"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="红包抵扣节省"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_red_price"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_member_price_save_tip"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_16"
+        app:startText="¥"
+        app:start_proportion="0.7"
+        app:start_text_color="@color/color_theme" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/tv_month_total_price"
+        android:layout_below="@+id/tv_red_save_tip"
+        android:layout_marginTop="23dp"
+        android:background="@color/color_stroke3" />
+
+
+</RelativeLayout>

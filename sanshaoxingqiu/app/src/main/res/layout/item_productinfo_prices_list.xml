@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/round_color_stroke5_20"
+    android:paddingLeft="8dp"
+    android:paddingRight="20dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/riv_mark"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        fresco:failureImage="@color/color_stroke5"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/color_stroke5"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@+id/riv_mark"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16"
+        app:startText="¥"
+        app:start_proportion="0.75"
+        app:start_text_color="@color/color_text1" />
+
+</RelativeLayout>

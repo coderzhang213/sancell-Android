@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_stroke5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/shape_bg_corner_white_8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_goods"
+                android:layout_width="122dp"
+                android:layout_height="122dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/iv_goods"
+                android:textColor="@color/text_main"
+                android:textSize="14sp"
+                tools:text="李施德林健康亮白漱口水李施德林健康亮白漱口水李施" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pin_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_goods_name"
+                android:layout_alignStart="@+id/tv_goods_name"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_pin_detail_num"
+                android:paddingLeft="4dp"
+                android:paddingTop="2dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/red_FA1905"
+                tools:text="3人团" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_goods_name"
+                android:layout_alignBottom="@+id/iv_goods"
+                android:textColor="@color/color_theme"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="116.00" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_pin_states"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_goods"
+                android:layout_alignParentRight="true"
+                tools:src="@mipmap/icon_pin_on_the_way" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_detail"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_below="@+id/iv_goods"
+            android:layout_marginTop="14dp"
+            android:background="@color/color_stroke4"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="订单详情" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_pin_detail_right_row" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pin_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_bg_corner_white_8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_pin_ing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:id="@+id/ll_count_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_pin_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="本团距结束还剩"
+                    android:textColor="@color/text_main"
+                    android:textSize="14sp" />
+
+                <include
+                    layout="@layout/include_pin_count_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/tv_pin_end" />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_num_need"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_count_down"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="@string/pin_need_num_join" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pin_over"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pin_states"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/color_theme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="恭喜您，直拼成功" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pin_states_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_main"
+                android:textSize="14sp"
+                tools:text="请耐心等待，商家将尽快发货" />
+
+        </LinearLayout>
+
+        <cn.sancell.xingqiu.order.PinImageOverlyView
+            android:id="@+id/vg_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/selector_pin_pink_btn"
+            android:gravity="center"
+            android:padding="11dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="邀请好友参加" />
+
+        <!--            <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                android:id="@+id/btn_reStart"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginLeft="12dp"-->
+        <!--                android:layout_marginRight="12dp"-->
+        <!--                android:textColor="#FF2E63"-->
+        <!--                android:gravity="center"-->
+        <!--                android:padding="11dp"-->
+        <!--                android:background="@drawable/shape_re_start_pin"-->
+        <!--                tools:text="重新发起直拼"-->
+        <!--                android:textSize="16sp"-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:layout_marginTop="16dp"-->
+        <!--                />-->
+
+        <RelativeLayout
+            android:id="@+id/rl_server"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="24dp"
+            android:background="#FAFCFC">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="直拼规则"
+                android:textColor="@color/text_main"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_rule_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="14dp"
+                android:layout_toLeftOf="@+id/iv_goods_server"
+                android:layout_toRightOf="@+id/tv_rule"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/text_second"
+                android:textSize="12sp"
+                tools:text="3件起售 | 只发江浙沪 | 7天无理由退换货" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_goods_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:src="@mipmap/icon_productinfo_more_mark" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_rp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_bg_corner_white_8"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_pin_success_rp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_success_rp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/iv_rp"
+            tools:text="@string/pin_rp_to_leader" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pin_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_bg_corner_white_8"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/icon_pin_detail_cancel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您已取消直拼"
+            android:textColor="@color/color_theme"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

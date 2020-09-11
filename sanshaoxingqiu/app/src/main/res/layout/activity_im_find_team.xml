@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.sancell.xingqiu.im.widget.ClearableEditTextWithIcon
+        android:id="@+id/et_team_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/nim_edit_text_bg"
+        android:hint="@string/team_search_hint"
+        android:inputType="number"
+        android:padding="5dp"
+        android:textSize="15sp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="#333333"
+        android:textColorHint="#80807c" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/green_btn_22_white"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:enabled="true"
+        android:text="@string/search"/>
+</LinearLayout>

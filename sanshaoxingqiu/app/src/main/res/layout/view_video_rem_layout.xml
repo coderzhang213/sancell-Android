@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_par_conet"
+    android:layout_width="256dp"
+    android:layout_height="72dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_voide_rem"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_commen_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="fitXY" />
+
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="#D9DBDB" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:lines="2"
+            android:text="混合果仁 30克7袋 - 美味搭配均衡营养"
+            android:textColor="#242526"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="¥783.00"
+                android:textColor="#242526"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_add_cart"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/icon_video_add_cart" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

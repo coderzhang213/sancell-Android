@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_color_white_tr_tl_8"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="邀请好友一起加入三少医美"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_15" />
+
+    <HorizontalScrollView
+        android:id="@+id/hs_share_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_line"
+        android:background="@color/colorWhite"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/btn_weixin"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_share_weichat"
+                android:drawablePadding="5dp"
+                android:gravity="center_horizontal"
+                android:text="微信好友"
+                android:textColor="@color/color_text5"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/btn_weixin_chat"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_share_weichat_firend"
+                android:drawablePadding="5dp"
+                android:gravity="center_horizontal"
+                android:text="朋友圈"
+                android:textColor="@color/color_text5"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/btn_qq"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_share_qq_firend"
+                android:drawablePadding="5dp"
+                android:gravity="center_horizontal"
+                android:text="QQ"
+                android:textColor="@color/color_text5"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/btn_qq_chat"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_share_qqchat_firend"
+                android:drawablePadding="5dp"
+                android:gravity="center_horizontal"
+                android:text="QQ空间"
+                android:textColor="@color/color_text5"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/btn_sina"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_share_sina_firend"
+                android:drawablePadding="5dp"
+                android:gravity="center_horizontal"
+                android:text="微博"
+                android:textColor="@color/color_text5"
+                android:textSize="@dimen/sp_13" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_stroke2" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_15" />
+
+</LinearLayout>

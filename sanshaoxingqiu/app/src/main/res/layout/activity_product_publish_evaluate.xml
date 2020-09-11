@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:scrollbars="none"
+        tools:context="cn.sancell.xingqiu.homeclassify.ProductPublishEvaluateActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/gap"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/color_stroke4" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_product_pic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/gap"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@color/color_f1f1f1"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@color/color_f1f1f1"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:viewAspectRatio="1" />
+
+            <com.yetland.ratingbar.DtRatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/gap"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/sdv_product_pic"
+                android:gravity="center_vertical"
+                app:rating_check="5"
+                app:rating_height="18"
+                app:rating_padding_left="2"
+                app:rating_padding_right="2"
+                app:rating_star_img="@mipmap/icon_publish_star_full"
+                app:rating_support_half="false"
+                app:rating_un_star_img="@mipmap/icon_publish_star_empty"
+                app:rating_width="20" />
+
+            <TextView
+                android:id="@+id/tv_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/gap"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/rating_bar"
+                android:gravity="center_vertical"
+                android:text="@string/rating_bar5"
+                android:textColor="@color/color_text1"
+                android:textSize="@dimen/sp_14" />
+
+
+            <EditText
+                android:id="@+id/ed_content"
+                android:layout_width="343dp"
+                android:layout_height="210dp"
+                android:layout_below="@+id/sdv_product_pic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/round_fafbfa_8"
+                android:gravity="left|top"
+                android:hint="@string/input_evaluate_content_tip"
+                android:lineSpacingExtra="2dp"
+                android:maxLength="500"
+                android:padding="12dp"
+                android:textColor="@color/color_text1"
+                android:textColorHint="@color/color_text3"
+                android:textCursorDrawable="@drawable/cursor"
+                android:textSize="@dimen/sp_13" />
+
+            <cn.sancell.xingqiu.widget.CusGridView
+                android:id="@+id/gv_select_pics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/ed_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:horizontalSpacing="8dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="8dp"></cn.sancell.xingqiu.widget.CusGridView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_commit"
+        style="@style/address_btn"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/commit" />
+</RelativeLayout>

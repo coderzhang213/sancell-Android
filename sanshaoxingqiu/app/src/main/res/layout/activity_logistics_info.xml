@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_logisticsinfo"
+    android:background="@color/colorWhite"
+    tools:context="cn.sancell.xingqiu.homeuser.LogisticsInfoActivity">
+
+    <TextView
+        android:id="@+id/tv_order_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:text="订单编号："
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_logistics_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@+id/tv_order_num"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:text="物流公司："
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_logistics_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@+id/tv_logistics_name"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:text="物流单号："
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_logisticsnum_copy"
+        android:layout_width="28dp"
+        android:layout_height="16dp"
+        android:layout_alignBottom="@+id/tv_logistics_num"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_stroke12"
+        android:gravity="center"
+        android:text="复制"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_10" />
+
+    <View
+        android:id="@+id/gap"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@+id/tv_logistics_num"
+        android:layout_marginTop="25dp"
+        android:background="@color/color_stroke4" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_logistics_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/gap"
+        android:divider="@null"
+        android:listSelector="@color/colorTran"
+        android:scrollbars="none" />
+
+</RelativeLayout>

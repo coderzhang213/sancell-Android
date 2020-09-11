@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/icon_sel_confirmation_disable" android:state_enabled="false" />
+    <item android:drawable="@mipmap/icon_sel_confirmation_popover_selected" android:state_selected="true" />
+    <item android:drawable="@mipmap/icon_sel_confirmation_popover_nor" />
+
+</selector>

@@ -1,0 +1,300 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-aspectjx'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/services'
+    }
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "default"]
+        flavorDimensions "color"
+        ndk {
+
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi-v7a', 'arm64-v8a'//, 'x86', 'x86_64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "cn.sancell.xingqiu",
+                JPUSH_APPKEY : "dabbb1fec00381dc4becc116", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            debuggable = false
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable = true
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('xingqiu.jks')
+            storePassword "jorrel666"
+            keyAlias "sancell"
+            keyPassword "jorrel666"
+        }
+        release {
+            storeFile file('xingqiu.jks')
+            storePassword "jorrel666"
+            keyAlias "sancell"
+            keyPassword "jorrel666"
+        }
+    }
+
+    repositories {
+        mavenCentral()
+    }
+    productFlavors {
+        ziyou {
+            applicationId rootProject.ext.android.applicationId
+            signingConfig signingConfigs.release //指定打包时的签名
+            buildConfigField("String", "ENVIRONMENT", '"off"')
+            buildConfigField("boolean", "IS_OFFICIAL", 'true')
+            buildConfigField("String", "H5_API", '"https://m.sanshaoxingqiu.cn/"')
+            manifestPlaceholders = [YUNXIN_KEY: "dc5bb1335d9fc2f3eb7e05daac1681ce"]
+        }
+        ziyouTest {
+            applicationId rootProject.ext.android.applicationId
+            signingConfig signingConfigs.debug //指定打包时的签名
+            buildConfigField("String", "ENVIRONMENT", '"test"')
+            buildConfigField("boolean", "IS_OFFICIAL", 'false')
+            buildConfigField("String", "H5_API", '"http://testm1.sanshaoxingqiu.cn/"')
+            manifestPlaceholders = [YUNXIN_KEY: "216522c3d5793c59ea864cf5d81eff00"]
+        }
+        ziyouRdc {
+            applicationId rootProject.ext.android.applicationId
+            signingConfig signingConfigs.debug //指定打包时的签名
+            buildConfigField("String", "ENVIRONMENT", '"rdc"')
+            buildConfigField("boolean", "IS_OFFICIAL", 'false')
+            buildConfigField("String", "H5_API", '"http://testm1.sanshaoxingqiu.cn/"')
+            manifestPlaceholders = [YUNXIN_KEY: "dc5bb1335d9fc2f3eb7e05daac1681ce"]
+        }
+        ziyouPre {
+            applicationId rootProject.ext.android.applicationId
+            signingConfig signingConfigs.debug //指定打包时的签名
+            buildConfigField("String", "ENVIRONMENT", '"pre"')
+            buildConfigField("boolean", "IS_OFFICIAL", 'false')
+            buildConfigField("String", "H5_API", '"http://testm1.sanshaoxingqiu.cn/"')
+            manifestPlaceholders = [YUNXIN_KEY: "216522c3d5793c59ea864cf5d81eff00"]
+        }
+
+        ziyouRp {
+            applicationId rootProject.ext.android.applicationId
+            signingConfig signingConfigs.debug //指定打包时的签名
+            buildConfigField("String", "ENVIRONMENT",'"rp"' )
+            buildConfigField("boolean", "IS_OFFICIAL", 'false')
+            buildConfigField("String", "H5_API", '"http://testm1.sanshaoxingqiu.cn/"')
+            manifestPlaceholders = [YUNXIN_KEY: "216522c3d5793c59ea864cf5d81eff00"]
+        }
+        ziyouPreRe {
+            applicationId rootProject.ext.android.applicationId
+            signingConfig signingConfigs.debug //指定打包时的签名
+            buildConfigField("String", "ENVIRONMENT", '"pre_re"')
+            buildConfigField("boolean", "IS_OFFICIAL", 'true')
+            buildConfigField("String", "H5_API", '"http://testm1.sanshaoxingqiu.cn/"')
+            manifestPlaceholders = [YUNXIN_KEY: "216522c3d5793c59ea864cf5d81eff00"]
+        }
+        ziyouMin {
+            applicationId rootProject.ext.android.applicationId
+            signingConfig signingConfigs.debug //指定打包时的签名
+            buildConfigField("String", "ENVIRONMENT", '"min"')
+            buildConfigField("boolean", "IS_OFFICIAL", 'false')
+            buildConfigField("String", "H5_API", '"http://testm1.sanshaoxingqiu.cn/"')
+            manifestPlaceholders = [YUNXIN_KEY: "216522c3d5793c59ea864cf5d81eff00"]
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            if (variant.buildType.name.equals('debug')) {
+                outputFileName = "${variant.productFlavors[0].name + "-" + buildType.name + "-v" + defaultConfig.versionName}-debug.apk"
+            } else {
+                outputFileName = "${variant.productFlavors[0].name + "-" + buildType.name + "-v" + defaultConfig.versionName}.apk"
+            }
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+//configurations.all {
+//    resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
+//}
+
+aspectjx {
+//排除所有package路径中包含`android.support`的class文件及库（jar文件）
+    exclude 'alipay'
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    androidTestImplementation rootProject.ext.dependencies["runner"]
+    androidTestImplementation rootProject.ext.dependencies["espresso"]
+
+    // Retrofit库
+    api 'com.squareup.retrofit2:retrofit:2.6.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    // gson解析，可以自行替换
+    api 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    // 日志的拦截器，也可以自行选择
+    api rootProject.ext.dependencies["logging-interceptor"]
+    api rootProject.ext.dependencies["rxjava2"]
+    api rootProject.ext.dependencies["rxandroid"]
+
+    /*rx-android-java*/
+    api rootProject.ext.dependencies["rxlifecycle"]
+    api rootProject.ext.dependencies["rxlifecycle-components"]
+
+    //view注解
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    //Fresco
+    api rootProject.ext.dependencies["fresco"]
+
+    api 'com.github.bumptech.glide:glide:4.10.0'
+//    annotationProcessor rootProject.ext.dependencies["annotations"]
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    // 支持 GIF 动图，需要添加
+    implementation rootProject.ext.dependencies["animated-gif"]
+
+    //支持 WebP （静态图+动图），需要添加
+    implementation rootProject.ext.dependencies["animated-webp"]
+    implementation rootProject.ext.dependencies["webpsupport"]
+
+    //屏幕适配
+    implementation rootProject.ext.dependencies["autosize"]
+
+    //状态栏
+    //compile 'com.jaeger.statusbarutil:library:1.5.1
+
+    //极光推送
+    implementation rootProject.ext.dependencies["jpush"]
+    implementation rootProject.ext.dependencies["jcore"]
+
+    //Android M动态权限配置框架，基于AOP方式aspectjx，支持类，方法的权限配置
+    implementation rootProject.ext.dependencies["permissionaspect"]
+    implementation rootProject.ext.dependencies["aspectjrt"]
+
+    //腾讯bugly
+    implementation 'com.tencent.bugly:crashreport_upgrade:1.4.5'
+    implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
+
+    //阿里云
+    implementation rootProject.ext.dependencies["oss-android-sdk"]
+
+    //微信支付
+    implementation rootProject.ext.dependencies["wechat-sdk"]
+
+    //列表适配器
+    implementation rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+
+    //星星评价
+    implementation rootProject.ext.dependencies["dtratingbar"]
+
+    //js交互
+    implementation rootProject.ext.dependencies["jsbridge"]
+
+    //引导页
+    //implementation 'com.github.Johnjson:GuideActivity:v1.0.1'
+
+    //倒计时
+    //implementation 'com.github.zrunker:ZCountDownView:v1.1'
+
+    /*implementation 'com.github.bumptech.glide:glide:4.9.0'
+            annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'*/
+    implementation(name: 'alipaySdk-15.6.2-20190416165036', ext: 'aar')
+
+    implementation project(':banner_library')
+    implementation project(':expandable-recyclerview')
+    implementation project(':takephoto_library')
+    implementation project(':imagepicker')
+    implementation project(':reveal-banner')
+
+    implementation project(':uikit')
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+
+    implementation 'com.youth.banner:banner:2.0.10'
+
+    implementation 'com.netease.nimlib:push:6.9.1'
+    implementation 'com.meizu.flyme.internet:push-internal:3.8.6'
+    implementation 'com.huawei.hms:push:3.0.2.300'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.7.1'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.4.2'
+
+    implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+    //引用腾讯直播
+    implementation project(':lvb')
+    implementation 'jp.wasabeef:recyclerview-animators:2.2.6'
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    //加载gif动画
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    //
+    implementation "androidx.viewpager2:viewpager2:1.0.0-alpha01"
+
+    implementation 'com.blankj:utilcode:1.22.7'
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_replay"
+    android:orientation="vertical"
+    android:layout_width="64dp"
+    android:layout_height="20dp"
+    android:background="@drawable/shape_live_replay_top">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_live_status"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="回放"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:drawableLeft="@mipmap/icon_video_replay"
+        android:drawablePadding="4dp"/>
+
+</LinearLayout>

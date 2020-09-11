@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="10dp"
+        android:text="@string/bind_jump"
+        android:textColor="@color/color_text3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/user_bind_invite"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_28"
+            android:textStyle="bold"
+          />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_bind_invite_jump_add"
+            android:textSize="@dimen/sp_13" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_inviter_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="57dp"
+            android:background="@color/color_text1_tranall"
+            android:focusable="true"
+            android:maxLength="10"
+            android:hint="@string/user_bind_invite_input_id"
+            android:inputType="number"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColorHint="@color/color_CACCCA"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/cursor_shape"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/color_E3D5E3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_save"
+            style="@style/login_btn"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/user_bind_invite_sure" />
+    </LinearLayout>
+
+</LinearLayout>

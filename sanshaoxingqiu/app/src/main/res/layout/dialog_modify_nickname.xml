@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/modify_nick_name"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="16dp"
+        android:paddingTop="24dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_productinfo_dialog_close" />
+
+    <EditText
+        android:id="@+id/ed_nickname"
+        style="@style/editText_text"
+        android:layout_below="@+id/iv_dialog_close"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:hint="@string/nick_name_format"
+        android:maxLines="1" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ed_nickname"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke4" />
+
+
+    <TextView
+        android:id="@+id/btn_commit"
+        style="@style/ordercommit_btn"
+        android:layout_below="@+id/line"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="27dp"
+        android:enabled="false"
+        android:text="@string/sure" />
+
+</RelativeLayout>

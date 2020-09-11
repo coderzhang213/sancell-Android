@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.sancell.xingqiu.homeshoppingcar.ShoppingCarActivity">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="cn.sancell.xingqiu.homeshoppingcar.HomeShoppingCarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="shoppingcarfragment"
+        tools:layout="@layout/fragment_homeshopping_car" />
+
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_black_back" />
+</RelativeLayout>

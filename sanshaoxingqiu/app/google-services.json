@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "219309569229",
+    "firebase_url": "https://sanshao-2d07a.firebaseio.com",
+    "project_id": "sanshao-2d07a",
+    "storage_bucket": "sanshao-2d07a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219309569229:android:b315003f09f395b2776584",
+        "android_client_info": {
+          "package_name": "cn.sancell.xingqiu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219309569229-eglhbiat39j3uo0jvrli65okhbeebigv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cn.sancell.xingqiu",
+            "certificate_hash": "606f83ac683aaebc51a39b99415c8bc634dc8705"
+          }
+        },
+        {
+          "client_id": "219309569229-fpb31mcabbpgsa5bv2k1p57hvo1ebb43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPq6ZMqcQicrguEewsjwVqGAy3pEeaQ1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219309569229-fpb31mcabbpgsa5bv2k1p57hvo1ebb43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

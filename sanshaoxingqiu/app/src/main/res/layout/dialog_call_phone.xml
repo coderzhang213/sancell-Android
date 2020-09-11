@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="工作时间：10:00-18:00"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_13" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+
+    <TextView
+        android:id="@+id/tv_phone3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:text="在线客服"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_14"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+
+    <TextView
+        android:id="@+id/tv_phone1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="15216736581"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+
+    <TextView
+        android:id="@+id/tv_phone2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="15216753601"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_14" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+    <TextView
+        android:id="@+id/tv_phone5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:text="15202166190"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+    <TextView
+        android:id="@+id/tv_phone6"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:text="18221513892"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_14" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_stroke4" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_color_stroke4_20_stroke1"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+
+</LinearLayout>

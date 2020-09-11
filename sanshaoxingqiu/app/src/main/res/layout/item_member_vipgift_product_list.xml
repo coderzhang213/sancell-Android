@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_item"
+    android:layout_width="132dp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="12dp"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_pic"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_color_stroke5_8"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@color/colorWhite"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/colorWhite"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="8dp"
+        fresco:viewAspectRatio="1" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/sdv_pic"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_13" />
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="2dp"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_18"
+        fresco:startText="¥"
+        fresco:start_proportion="1"
+        fresco:start_text_color="@color/color_theme" />
+
+    <cn.sancell.xingqiu.widget.NumberDinRegularTextView
+        android:id="@+id/tv_price_orig"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_below="@+id/tv_price"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_13" />
+
+
+    <TextView
+        android:id="@+id/tv_gift_normal"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/tv_price_orig"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_theme_16"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_gift_other"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/tv_price_orig"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_color_stroke3_16"
+        android:gravity="center"
+        android:text="已抢光"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_gift_normal"
+        android:layout_width="100dp"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tv_gift_normal"
+        android:src="@mipmap/icon_gift_limit_time_buy_shadow" />
+
+</RelativeLayout>

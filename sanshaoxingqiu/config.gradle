@@ -1,0 +1,65 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+ext {
+    /*统一support包管理*/
+    ANDROID_SUPPORT_LIBRARY_VERSION = "27.1.1"
+
+
+    android = [
+            compileSdkVersion        : 29,
+            minSdkVersion            : 21,
+            targetSdkVersion         : 29,
+            versionCode              : 210,
+            versionName              : "3.3.0",
+            applicationId            : "cn.sancell.xingqiu",
+            /*单元测试*/
+            testInstrumentationRunner: "android.support.test.runner.AndroidJUnitRunner"
+    ]
+
+    dependencies = [
+
+            //support
+            "espresso"                     : 'androidx.test.espresso:espresso-core:3.1.0',
+            "appcompat-v7"                 : 'com.android.support:appcompat-v7:' + ANDROID_SUPPORT_LIBRARY_VERSION,
+            "design"                       : 'com.android.support:design:' + ANDROID_SUPPORT_LIBRARY_VERSION,
+            "constraint"                   : 'androidx.constraintlayout:constraintlayout:1.1.3',
+            "recyclerview"                 : 'com.android.support:recyclerview-v7:' + ANDROID_SUPPORT_LIBRARY_VERSION,
+            "support-annotations"          : 'com.android.support:support-annotations:' + ANDROID_SUPPORT_LIBRARY_VERSION,
+            "compat"                       : 'com.android.support:support-compat:' + ANDROID_SUPPORT_LIBRARY_VERSION,
+
+            //rx2
+            "retrofit2"                    : 'com.squareup.retrofit2:retrofit:2.3.0',
+            "retrofit2:adapter"            : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
+            "gson"                         : 'com.squareup.retrofit2:converter-gson:2.3.0',
+            "logging-interceptor"          : 'com.squareup.okhttp3:logging-interceptor:3.6.0',
+            "rxjava2"                      : 'io.reactivex.rxjava2:rxjava:2.0.5',
+            "rxandroid"                    : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            "rxlifecycle"                  : 'com.trello.rxlifecycle3:rxlifecycle:3.1.0',
+            "rxlifecycle-components"       : 'com.trello.rxlifecycle3:rxlifecycle-components:3.1.0',
+
+            //tools
+            "butterknife"                  : 'com.jakewharton:butterknife:10.0.0',
+            "fresco"                       : 'com.facebook.fresco:fresco:0.14.1',
+            "animated-gif"                 : 'com.facebook.fresco:animated-gif:0.14.1',
+            "animated-webp"                : 'com.facebook.fresco:animated-webp:0.14.1',
+            "webpsupport"                  : 'com.facebook.fresco:webpsupport:0.14.1',
+            "autosize"                     : 'me.jessyan:autosize:1.1.2',
+            "jpush"                        : 'cn.jiguang.sdk:jpush:3.3.4',
+            "jcore"                        : 'cn.jiguang.sdk:jcore:2.1.2',
+            "permissionaspect"             : 'com.firefly1126.permissionaspect:permissionaspect:1.0.1',
+            "aspectjrt"                    : 'org.aspectj:aspectjrt:1.8.9',
+            "crashreport_upgrade"          : 'com.tencent.bugly:crashreport_upgrade:latest.release',
+            "nativecrashreport"            : 'com.tencent.bugly:nativecrashreport:latest.release',
+            "BaseRecyclerViewAdapterHelper": 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45-androidx',
+            "dtratingbar"                  : 'com.yetland.dtratingbar:dtratingbar:1.0.1',
+            "jsbridge"                     : 'com.github.lzyzsd:jsbridge:1.0.4',
+            "oss-android-sdk"              : 'com.aliyun.dpa:oss-android-sdk:+',
+            "wechat-sdk"                   : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+',
+            "glide"                        : 'com.github.bumptech.glide:glide:4.10.0',
+            "annotations"                  : 'com.android.support:support-annotations:29.0.0',
+            "glide_compiler"               : 'com.github.bumptech.glide:compiler:4.10.0',
+            //test
+            "runner"                       : 'androidx.test:runner:1.1.0',
+            "junit"                        : 'junit:junit:4.12'
+    ]
+}

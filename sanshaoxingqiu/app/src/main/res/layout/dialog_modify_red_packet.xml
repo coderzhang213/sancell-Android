@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_color_white_tr_tl_8"
+    android:paddingBottom="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/round_color_stroke5_tr_tl_8"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="修改红包抵扣金额"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_close"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="18dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="18dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_productinfo_dialog_close" />
+
+    <cn.sancell.xingqiu.widget.CusPriceEditText
+        android:id="@+id/ed_red_packet"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/iv_dialog_close"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_stroke1_20"
+        android:gravity="center"
+        android:inputType="number|numberDecimal"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_20" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_jian"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/iv_dialog_close"
+        android:layout_marginTop="24dp"
+        android:layout_toLeftOf="@+id/ed_red_packet"
+        android:src="@mipmap/icon_productinfo_jian" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_jia"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/iv_dialog_close"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/ed_red_packet"
+        android:src="@mipmap/icon_productinfo_jia" />
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="215dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/ed_red_packet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/theme_btn_click_style"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="@color/colorWhite" />
+
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_idenfify_check"
+        android:layout_marginTop="120dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="认证失败"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_main"
+        android:layout_marginTop="23dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_failed_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="您的身份证号码面照片太模糊，出生年月遮挡"
+        android:layout_marginTop="12dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_try"
+        android:layout_width="224dp"
+        android:layout_height="44dp"
+        android:textColor="@color/text_color_white"
+        android:text="重新认证"
+        android:textSize="16sp"
+        android:background="@drawable/shape_live_identify_error_btn"
+        android:layout_marginTop="80dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

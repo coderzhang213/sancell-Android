@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_goods_info_top"
+    android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+    <include layout="@layout/include_pin_tuan_act" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_real_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#242526"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="¥228.74" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_line_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textSize="14sp"
+            tools:text="¥228.74" />
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_goods_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/text_main"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="李施德林健康亮白漱口水李施德林健康亮白漱口水李施德林健康亮白漱口水" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_goods_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/text_second"
+        android:textSize="13sp"
+        tools:text="诗以传情，食以达意。8款爆品美食集结为你表达爱意心中有爱，每一天都是情人节。" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_goods_sku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_goods_sku"
+        android:text="960gx1盒"
+        android:textColor="@color/color_theme"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_like_list_itembg"
+    android:orientation="vertical">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_color_stroke3_tr_tl_8_stroke1"
+        android:padding="1dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@drawable/round_color_stroke3_tr_tl_8_stroke1"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/round_color_stroke3_tr_tl_8_stroke1"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundBottomLeft="false"
+        fresco:roundBottomRight="false"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="8dp"
+        fresco:viewAspectRatio="1" />
+
+    <ImageView
+        android:id="@+id/iv_seckill_mark"
+        android:layout_width="48dp"
+        android:layout_height="14dp"
+        android:layout_alignLeft="@+id/sdv_pic"
+        android:layout_alignTop="@+id/sdv_pic"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/icon_list_sekill_mark" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sdv_pic"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        tools:text="意大利珍藏干红葡萄酒酒"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_tags_title"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:includeFontPadding="false"
+        android:text="武夷山丨茶叶"
+        android:textColor="@color/color_text4"
+        android:textSize="@dimen/sp_11" />
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_below="@+id/tv_tags_title"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:textColor="@color/rome_text_color"
+        android:textSize="@dimen/sp_24"
+        fresco:startText="¥"
+        fresco:start_proportion="0.66"
+        fresco:start_text_color="@color/rome_text_color" />
+
+    <TextView
+        android:id="@+id/tv_not_member_price_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignBottom="@+id/tv_price"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/tv_price"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:text="起"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_11" />
+
+    <cn.sancell.xingqiu.widget.NumberDinRegularTextView
+        android:id="@+id/tv_price_orig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_price"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_13" />
+</RelativeLayout>
+

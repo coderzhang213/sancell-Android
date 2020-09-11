@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="当前红包金额"
+        android:textColor="@color/color_text5"
+        android:textSize="@dimen/sp_15" />
+
+    <ImageView
+        android:id="@+id/iv_reward_price_introduce"
+        android:layout_width="46dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:src="@mipmap/icon_reward_price_introduce" />
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_remain_red_packet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_reward_price_introduce"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_38"
+        fresco:startText="¥"
+        fresco:start_proportion="0.73"
+        fresco:start_text_color="@color/color_theme" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/tv_remain_red_packet"
+        android:layout_marginTop="40dp"
+        android:background="@color/color_stroke5"
+        android:gravity="center"
+        android:text="- 红包收支明细 -"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_disbursement_price"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:text="支出"
+        android:textColor="@color/color_text2"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_income_price"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/tv_disbursement_price"
+        android:gravity="center_vertical"
+        android:text="收入"
+        android:textColor="@color/color_text2"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_income_price"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke2"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_total"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:text="收入"
+        android:gravity="center|right"
+        android:textColor="@color/color_text2"
+        android:textSize="14sp"
+        android:paddingRight="16dp"
+        android:layout_below="@+id/tv_income_price"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_stroke3"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/tv_total"/>
+
+</RelativeLayout>

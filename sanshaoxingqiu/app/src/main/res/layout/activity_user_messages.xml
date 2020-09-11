@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="cn.sancell.xingqiu.homeuser.UserMessagesActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_transaction_logistics_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="32dp"
+        android:paddingRight="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_mark1"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="26dp"
+            android:src="@mipmap/icon_message_transaction_logistics" />
+
+        <ImageView
+            android:id="@+id/iv_red_point_transaction_logistics"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="26dp"
+            android:src="@mipmap/icon_message_red_point" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_mark1"
+            android:layout_marginLeft="27dp"
+            android:layout_toRightOf="@+id/iv_mark1"
+            android:includeFontPadding="false"
+            android:text="@string/message_transaction_logistics"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_transaction_logistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_mark1"
+            android:layout_marginLeft="27dp"
+            android:layout_toRightOf="@+id/iv_mark1"
+            android:includeFontPadding="false"
+            android:text="您的订单已发货"
+            android:textColor="@color/color_text6"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_time_transaction_logistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:text="10:18"
+            android:textColor="@color/color_text4"
+            android:textSize="@dimen/sp_13" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_mark1"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@+id/iv_mark1"
+            android:background="@color/color_stroke2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_red_packet_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="32dp"
+        android:paddingRight="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_mark2"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="26dp"
+            android:src="@mipmap/icon_message_red_packet" />
+
+        <ImageView
+            android:id="@+id/iv_red_point_red_packet"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="26dp"
+            android:src="@mipmap/icon_message_red_point" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_mark2"
+            android:layout_marginLeft="27dp"
+            android:layout_toRightOf="@+id/iv_mark2"
+            android:includeFontPadding="false"
+            android:text="@string/message_red_packet"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_red_packet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_mark2"
+            android:layout_marginLeft="27dp"
+            android:layout_toRightOf="@+id/iv_mark2"
+            android:includeFontPadding="false"
+            android:text="红包到账提醒"
+            android:textColor="@color/color_text6"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_time_red_packet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:text="10:18"
+            android:textColor="@color/color_text4"
+            android:textSize="@dimen/sp_13" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_mark2"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@+id/iv_mark2"
+            android:background="@color/color_stroke2" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_notice_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="32dp"
+        android:paddingRight="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_mark3"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="26dp"
+            android:src="@mipmap/icon_message_notice" />
+
+        <ImageView
+            android:id="@+id/iv_red_point_notice"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="26dp"
+            android:src="@mipmap/icon_message_red_point" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_mark3"
+            android:layout_marginLeft="27dp"
+            android:layout_toRightOf="@+id/iv_mark3"
+            android:includeFontPadding="false"
+            android:text="@string/message_notice"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_mark3"
+            android:layout_marginLeft="27dp"
+            android:layout_toRightOf="@+id/iv_mark3"
+            android:includeFontPadding="false"
+            android:text="红包到账提醒"
+            android:textColor="@color/color_text6"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_time_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:text="10:18"
+            android:textColor="@color/color_text4"
+            android:textSize="@dimen/sp_13" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_mark3"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@+id/iv_mark3"
+            android:background="@color/color_stroke2" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/empty"
+        layout="@layout/layout_empty_message_list" />
+
+
+</LinearLayout>

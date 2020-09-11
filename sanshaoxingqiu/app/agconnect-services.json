@@ -1,0 +1,11 @@
+{
+	"client":{
+		"cp_id":"890086000102181337",
+		"product_id":"9105163812218565549",
+		"client_id":"233825129795159104",
+		"client_secret":"5277EF490E7AA43F4BDE886B835E44B24FD4D0D866CA3B4B163B570DC5AA1F27",
+		"app_id":"100587615",
+		"package_name":"cn.sancell.xingqiu"
+	},
+	"configuration_version":"1.0"
+}

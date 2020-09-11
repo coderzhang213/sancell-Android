@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="cn.sancell.xingqiu.usermember.UserMemberCenterActivity">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_member_center_bg" />
+
+    <cn.sancell.xingqiu.widget.CusScrollview
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:paddingTop="108dp">
+
+
+            <ImageView
+                android:id="@+id/iv_memberlevel_card"
+                android:layout_width="315dp"
+                android:layout_height="372dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_member_level_name"
+                android:layout_width="70dp"
+                android:layout_height="18dp"
+                android:layout_alignLeft="@+id/sdv_memberlevel_card"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="16dp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_member_photo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/iv_member_level_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_default_photo"
+                fresco:failureImage="@mipmap/icon_default_photo"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@mipmap/icon_default_photo"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/colorWhite"
+                fresco:roundingBorderWidth="1dp" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/sdv_memberlevel_card"
+                android:layout_alignRight="@+id/sdv_memberlevel_card"
+                android:layout_below="@+id/sdv_member_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/color_text1"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_member_id_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_nickname"
+                android:layout_marginTop="12dp"
+                android:layout_toLeftOf="@+id/tv_member_id"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="会员ID:"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_member_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_nickname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/color_text1"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:id="@+id/iv_copy"
+                android:layout_width="26dp"
+                android:layout_height="14dp"
+                android:layout_below="@+id/tv_nickname"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/tv_member_id"
+                android:src="@mipmap/icon_copy" />
+
+            <TextView
+                android:id="@+id/tv_member_valid_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_member_id"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/color_text1" />
+
+
+            <ImageView
+                android:layout_width="375dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/tv_member_valid_time"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_member_center_white_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_member_valid_time"
+                android:layout_marginTop="79dp"
+                android:background="@color/colorWhite">
+
+                <ImageView
+                    android:id="@+id/iv_privilege_mark"
+                    android:layout_width="220dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_privilege"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_hot_sell_title"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="22dp"
+                    android:layout_marginTop="76dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/tv_privilege_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/rcv_privilege"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/round_theme_20_stroke1"
+                    android:gravity="center"
+                    android:text="权益详情"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/tv_member_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_privilege_detail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:autoLink="all"
+                    android:text="芙蓉会粉丝协议"
+                    android:textColor="@color/color_text3"
+                    android:textSize="@dimen/sp_12" />
+
+                <LinearLayout
+                    android:id="@+id/ll_gift_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_member_agreement"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_member_open_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="会员开通记录"
+                        android:textColor="@color/color_text6"
+                        android:textSize="@dimen/sp_13" />
+
+                    <View
+                        android:id="@+id/view_line"
+                        android:layout_width="1dp"
+                        android:layout_height="11dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@color/color_text6" />
+
+
+                    <TextView
+                        android:id="@+id/tv_member_pack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="我的会员礼包"
+                        android:textColor="@color/color_text6"
+                        android:textSize="@dimen/sp_13" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_save_price"
+                android:layout_width="271dp"
+                android:layout_height="68dp"
+                android:layout_below="@+id/tv_member_valid_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19dp"
+                android:background="@mipmap/icon_member_center_save_price"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:id="@+id/tv_save_price_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_save_price"
+                    android:layout_marginBottom="3dp"
+                    android:includeFontPadding="false"
+                    android:text="已为您节省"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_12" />
+
+                <cn.sancell.xingqiu.widget.RelativeSizeTextView
+                    android:id="@+id/tv_save_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@+id/tv_save_price_tip"
+                    android:gravity="top"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_save_price"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@+id/tv_save_price"
+                    android:includeFontPadding="false"
+                    android:text="元"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_12" />
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/tv_save_price"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/icon_member_save_toright" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </cn.sancell.xingqiu.widget.CusScrollview>
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorTran">
+
+
+        <ImageView
+            android:id="@+id/btn_back_black"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_black_back" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_white_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="会员中心"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_title_black"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="会员中心"
+            android:textColor="@color/color_text1_tranall"
+            android:textSize="@dimen/sp_15" />
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/network_error"
+        layout="@layout/layout_error_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:visibility="gone" />
+
+</RelativeLayout>

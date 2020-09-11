@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="36dp"
+    android:paddingRight="36dp"
+    tools:context="cn.sancell.xingqiu.homeuser.ForgetPayPwdActivity">
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="73dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/input_pay_pwd_format_tip"
+        android:textColor="@color/color_text4"
+        android:textSize="@dimen/sp_14" />
+
+    <cn.sancell.xingqiu.widget.VerificationCodeEditText
+        android:id="@+id/ed_pay_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:inputType="number"
+        android:text=""
+        android:textColor="@color/color_text1"
+        android:textSize="20sp"
+        app:bottomLineHeight="1dp"
+        app:bottomLineNormalColor="@color/color_stroke2"
+        app:bottomLineSelectedColor="@color/color_theme"
+        app:cursorColor="@color/color_theme"
+        app:figures="6"
+        app:pointRadius="6dp"
+        app:selectedBackgroundColor="@color/colorWhite"
+        app:verCodeMargin="8dp" />
+
+    <cn.sancell.xingqiu.widget.VerificationCodeEditText
+        android:id="@+id/ed_pay_pwd_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:inputType="number"
+        android:text=""
+        android:textColor="@color/color_text1"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:bottomLineHeight="1dp"
+        app:bottomLineNormalColor="@color/color_stroke2"
+        app:bottomLineSelectedColor="@color/color_theme"
+        app:cursorColor="@color/color_theme"
+        app:figures="6"
+        app:pointRadius="6dp"
+        app:selectedBackgroundColor="@color/colorWhite"
+        app:verCodeMargin="8dp" />
+
+    <TextView
+        android:id="@+id/tv_error_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/color_function_error"
+        android:textSize="@dimen/sp_12" />
+
+</LinearLayout>

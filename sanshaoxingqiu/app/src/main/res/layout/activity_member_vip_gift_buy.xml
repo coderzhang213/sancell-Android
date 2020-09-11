@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.sancell.xingqiu.usermember.MemberVipGiftBuyActivity">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_member_center_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="176dp"
+        android:background="@color/color_stroke5" />
+
+    <cn.sancell.xingqiu.widget.FoolishScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_card_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:divider="@null"
+                android:listSelector="@color/colorTran"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rcv_card_list"
+                android:background="@color/color_stroke5"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/member_privilege_vip_mark" />
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_privilege"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@color/colorWhite"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@color/colorWhite"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_seckill_gift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/round_white_8"
+                    android:padding="12dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_gift_module_seckill_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="限量购礼包"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_gift_module_seckill_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gift_module_seckill_title"
+                        android:layout_marginTop="4dp"
+                        android:text="限时抢购，赠送一年VIP资格"
+                        android:textColor="@color/color_text3"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_gift_module_seckill_title"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@mipmap/icon_vip_gift_more"
+                        android:gravity="center_vertical"
+                        android:text="全部礼包"
+                        android:textColor="@color/color_text3"
+                        android:textSize="@dimen/sp_12" />
+
+                    <View
+                        android:id="@+id/view_seckill_gift_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/rcv_seckill_gift"
+                        android:layout_alignParentTop="true" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_seckill_gift"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gift_module_seckill_desc"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:divider="@null"
+                        android:listSelector="@color/colorTran"
+                        android:nestedScrollingEnabled="false"
+                        android:scrollbars="none" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_gift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/round_white_8"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_gift_module_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="限量购礼包"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_gift_module_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gift_module_title"
+                        android:layout_marginTop="4dp"
+                        android:text="超值好物，赠送一年VIP资格"
+                        android:textColor="@color/color_text3"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_gift_module_title"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@mipmap/icon_vip_gift_more"
+                        android:gravity="center_vertical"
+                        android:text="全部礼包"
+                        android:textColor="@color/color_text3"
+                        android:textSize="@dimen/sp_12" />
+
+                    <View
+                        android:id="@+id/view_gift_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/rcv_gift"
+                        android:layout_alignParentTop="true" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_gift"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gift_module_desc"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:divider="@null"
+                        android:listSelector="@color/colorTran"
+                        android:nestedScrollingEnabled="false"
+                        android:scrollbars="none" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_privilege"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="12dp"
+                    android:divider="@null"
+                    android:listSelector="@color/colorTran"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </cn.sancell.xingqiu.widget.FoolishScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorTran">
+
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_white_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="猩球会员"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_15" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/network_error"
+        layout="@layout/layout_error_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    tools:context=".login.PwdLoginActivity">
+
+    <View
+        android:id="@+id/empty"
+        android:layout_width="375dp"
+        android:layout_height="80dp" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:paddingRight="20dp"
+        android:src="@mipmap/icon_black_back_nopadding" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/empty"
+        android:text="@string/reset_pwd"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_28" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="6dp"
+        android:includeFontPadding="false"
+        android:text="@string/reset_pwd_tip"
+        android:textColor="@color/color_7E807E"
+        android:textSize="@dimen/sp_13" />
+
+
+    <EditText
+        android:id="@+id/ed_pwd"
+        style="@style/editText_pwd"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="40dp"
+        android:hint="@string/input_new_pwd_hint" />
+
+    <CheckBox
+        android:id="@+id/cb_password"
+        style="@style/PwdCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_pwd"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ed_pwd"
+        android:layout_below="@+id/ed_login_mobile"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_clear_pwd"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_pwd"
+        android:layout_alignTop="@+id/ed_pwd"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/cb_password"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_delete_phone"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/login_line"
+        android:layout_below="@+id/ed_pwd" />
+
+    <EditText
+        android:id="@+id/ed_pwd_again"
+        style="@style/editText_pwd"
+        android:layout_below="@+id/view_line"
+        android:hint="@string/input_new_pwd_again_hint" />
+
+    <CheckBox
+        android:id="@+id/cb_password_again"
+        style="@style/PwdCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_pwd_again"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ed_pwd_again"
+        android:layout_below="@+id/ed_login_mobile"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_clear_pwd_again"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_pwd_again"
+        android:layout_alignTop="@+id/ed_pwd_again"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/cb_password"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_delete_phone"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view_line1"
+        style="@style/login_line"
+        android:layout_below="@+id/ed_pwd_again" />
+
+    <TextView
+        android:id="@+id/tv_tip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line1"
+        android:layout_marginTop="8dp"
+        android:text="@string/input_pwd_format_tip"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/btn_sure"
+        style="@style/login_btn"
+        android:layout_below="@+id/tv_tip1"
+        android:layout_marginTop="40dp"
+        android:text="@string/sure" />
+
+
+</RelativeLayout>

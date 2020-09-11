@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CE2421"
+        android:fitsSystemWindows="true">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="领取红包"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_gravity="center"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_rp_detail_top"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:id="@+id/tv_send_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="xxx的红包"
+            android:gravity="center"
+            android:textColor="@color/color_red_name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:drawablePadding="5dp"/>
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="恭喜发财 大吉大利"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/color_red_name" />
+        <TextView
+            android:id="@+id/tv_grab_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="100"
+            android:textSize="40sp"
+            android:layout_marginTop="36dp"
+            android:textColor="@color/color_red_name" />
+        <TextView
+            android:id="@+id/tv_rp_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已存入红包"
+            android:textColor="@color/color_red_name"
+            android:drawableRight="@mipmap/jrmf_rp_open_rp_arrow"
+            android:drawablePadding="5dp"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_garb_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="48个红包，已领取24/48个"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/common_fresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_rp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="暂无红包记录"
+        android:gravity="center"
+        android:textColor="@color/color_text1"
+        android:textSize="16sp"
+        android:layout_marginTop="100dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

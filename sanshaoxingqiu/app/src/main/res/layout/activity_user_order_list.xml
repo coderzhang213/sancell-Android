@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.sancell.xingqiu.homeuser.UserOrderListActivity">
+
+    <LinearLayout
+        android:id="@+id/mRadioGroup_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/order_all"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_nopay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/order_nopay"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_13"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_undelivered"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="待使用"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_delivered"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/order_delivered"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_13"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_finished"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/order_finished"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mRadioGroup_content" />
+
+</RelativeLayout>

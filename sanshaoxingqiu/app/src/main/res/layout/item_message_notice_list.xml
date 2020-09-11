@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="12dp">
+
+    <TextView
+        android:id="@+id/tv_notice_time"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/round_color_stroke3_6"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_white_8"
+        android:paddingBottom="20dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_notice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="36dp"
+            android:includeFontPadding="false"
+            android:text="红包结算提醒"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_notice_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_notice_title"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="3"
+            android:text="您购买的FOOJO半透明门窗密封条已退款完成，20元可用红包已退还"
+            android:textColor="@color/color_text2"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_notice_desc"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/round_color_stroke4_20_stroke1"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="点击查看"
+            android:textColor="@color/color_text5"
+            android:textSize="@dimen/sp_12" />
+
+    </RelativeLayout>
+
+</LinearLayout>

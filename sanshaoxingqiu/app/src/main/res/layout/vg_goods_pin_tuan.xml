@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_queue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_corner_white_8"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_pin_flipper_top" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="以下用户正在发起直拼，您可以直接参与"
+                android:textColor="@color/text_main"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <cn.sancell.xingqiu.widget.marque.XMarqueView
+            android:id="@+id/queue_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            app:isSetAnimDuration="true"
+            app:marquee_count="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/shape_bg_corner_white_8"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_purchase_get"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_alignBottom="@+id/tv_rule_title"
+                android:src="@mipmap/icon_purchase_give_rp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_rule_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/iv_purchase_get"
+                android:text="@string/rule_of_pin_tuan"
+                android:textColor="@color/text_main"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_rule_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_rule_title"
+                android:layout_alignStart="@+id/tv_rule_title"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_normal"
+                tools:text="@string/pin_rule_desc"
+                android:layout_toLeftOf="@+id/iv_rule_more"
+                android:layout_marginRight="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_rule_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_rule_title"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_productinfo_more_mark" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_rule_desc"
+                android:layout_alignStart="@+id/tv_rule_desc"
+                android:layout_marginTop="16dp"
+                android:background="#EBEEF5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_flow_get"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_alignBottom="@+id/tv_deliver_title"
+                android:src="@mipmap/icon_goods_location" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_flow_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/iv_flow_get"
+                android:text="@string/flow_of_pin_tuan"
+                android:textColor="@color/text_main"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_flow_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:src="@mipmap/icon_pin_flow" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

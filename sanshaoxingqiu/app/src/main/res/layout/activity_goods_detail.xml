@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F7">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom" />
+
+    <View
+        android:id="@+id/v_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:alpha="0"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorTran"
+        android:layout_below="@+id/v_bar">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_goods_back" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_goods_share"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_guide"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:alpha="0"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_guide_product"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="商品"
+                android:textSize="@dimen/sp_13" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_guide_parameter"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="参数"
+                android:textSize="@dimen/sp_13" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_guide_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="评论"
+                android:textSize="@dimen/sp_13" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_purchase_limit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@+id/rl_bottom"
+        android:background="#FFF7E6"
+        android:gravity="center"
+        android:textColor="#FFAA00"
+        android:visibility="gone"
+        tools:text="抱歉，当前地址不支持配送该商品" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_stroke3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:drawableTop="@mipmap/icon_goods_service"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="客服"
+            android:textColor="@color/color_text1"
+            android:textSize="9sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31dp"
+            android:layout_toRightOf="@+id/tv_service"
+            android:drawableTop="@mipmap/icon_goods_cart"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="购物车"
+            android:textColor="@color/color_text1"
+            android:textSize="9sp"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_purchase"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/tv_cart"
+            android:background="@drawable/selector_btn_purchase"
+            android:gravity="center"
+            android:text="发起直拼"
+            android:textColor="@color/btn_good_purchase_color"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

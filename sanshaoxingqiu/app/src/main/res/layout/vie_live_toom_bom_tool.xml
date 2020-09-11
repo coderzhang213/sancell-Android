@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_rig_tool"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_praise_sum"
+            android:layout_width="@dimen/home_live_tool_wh"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_tool_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/home_live_tool_margin"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/iv_commodity"
+            android:layout_width="@dimen/home_live_tool_wh"
+            android:layout_height="@dimen/home_live_tool_wh"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/home_live_tool_margin"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/commodity_icon" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_input_mssage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_live_tool_wh"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="@dimen/home_live_tool_margin"
+            android:layout_toLeftOf="@+id/ll_tool_layout"
+            android:layout_toRightOf="@+id/iv_commodity"
+            android:background="@drawable/live_message_bg_shar"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="和粉丝聊两句吧…"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_tool_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/home_live_tool_margin"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/iv_shar"
+                android:layout_width="@dimen/home_live_tool_wh"
+                android:layout_height="@dimen/home_live_tool_wh"
+                android:layout_margin="@dimen/home_live_tool_margin"
+                android:src="@mipmap/share_icon" />
+
+            <ImageView
+                android:id="@+id/iv_group"
+                android:layout_width="@dimen/home_live_tool_wh"
+                android:layout_height="@dimen/home_live_tool_wh"
+                android:layout_margin="@dimen/home_live_tool_margin"
+                android:src="@mipmap/live_croup"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_give"
+                android:layout_width="@dimen/home_live_tool_wh"
+                android:layout_height="@dimen/home_live_tool_wh"
+                android:layout_margin="@dimen/home_live_tool_margin"
+                android:src="@mipmap/live_read_pack" />
+
+
+            <ImageView
+                android:id="@+id/iv_df_zan"
+                android:layout_width="@dimen/home_live_tool_wh"
+                android:layout_height="@dimen/home_live_tool_wh"
+                android:layout_margin="@dimen/home_live_tool_margin"
+                android:src="@mipmap/praise_icon" />
+        </LinearLayout>
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/iv_click_praise"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/praise_icon"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>

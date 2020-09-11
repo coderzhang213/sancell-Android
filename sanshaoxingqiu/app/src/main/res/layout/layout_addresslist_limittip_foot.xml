@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:gravity="center_horizontal"
+    android:paddingTop="30dp"
+    android:text="- 地址数量已达上限，请删除部分后继续添加 -"
+    android:textColor="@color/color_text4"
+    android:textSize="@dimen/sp_12" />
+

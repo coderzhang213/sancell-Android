@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_item"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/iv_card_bg"
+        android:layout_width="315dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/member_level_card1" />
+
+    <ImageView
+        android:id="@+id/iv_level_name"
+        android:layout_width="70dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tv_card_status"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="34dp"
+        android:layout_marginLeft="21dp"
+        android:background="@drawable/round_colorwhite_tran80_12"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <RelativeLayout
+        android:id="@+id/rl_level_info"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_member_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_member_level_name"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_default_photo"
+            fresco:failureImage="@mipmap/icon_default_photo"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@mipmap/icon_default_photo"
+            fresco:placeholderImageScaleType="fitXY"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/colorWhite"
+            fresco:roundingBorderWidth="1dp" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/sdv_member_photo"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_16" />
+
+
+        <TextView
+            android:id="@+id/tv_member_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/sdv_member_photo"
+            android:layout_below="@+id/tv_nickname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/sdv_member_photo"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_member_valid_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="12dp"
+            android:textSize="@dimen/sp_12"
+            android:layout_toRightOf="@+id/sdv_member_photo" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

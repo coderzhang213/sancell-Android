@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="24dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_head"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_star"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_head_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/iv_head"
+        android:textColor="@color/color_text1"
+        android:textSize="16sp"
+        tools:text="三少买单①群三少买单①群三少买单①群"
+        android:maxLength="10"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_head"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/iv_head"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_14"
+        tools:text="平台福利大放送，会员抢先体验平台福利大放送，会员抢先体验"
+        android:maxLength="15"/>
+</RelativeLayout>

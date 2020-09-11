@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite">
+
+    <View
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:background="@color/color_theme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_ordertype"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/tv_ordertype_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                tools:text="已完成"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_ordertype_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_12"
+                tools:text="感谢您使用三少医美，期待再次为您服务。"/>
+
+            <ImageView
+                android:id="@+id/iv_ordertype_mark"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                tools:src="@mipmap/icon_orderinfo_undelivered"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_top_gopay"
+                android:layout_width="96dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/round_white_20"
+                android:gravity="center"
+                android:text="立即支付"
+                android:textColor="@color/color_theme"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/shape_order_detail_top"
+            android:paddingBottom="30dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="15dp"
+            android:paddingTop="30dp">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="2dp"
+                android:src="@mipmap/icon_order_location" />
+
+            <TextView
+                android:id="@+id/tv_address_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_logisticsinfo"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/iv1"
+                android:textColor="@color/color_text1"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="bold"
+                tools:text="方小姐"/>
+
+            <TextView
+                android:id="@+id/tv_address_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_address_name"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/tv_address_name"
+                android:textColor="@color/color_text1"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
+                tools:text="15633337777"/>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_address_name"
+                android:layout_below="@+id/tv_address_name"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_text3"
+                android:textSize="@dimen/sp_12"
+                tools:text="上海上海市虹口区水电路1388号晟柏科技园16层水电路1388号"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginTop="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_dot" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/text_main"
+            android:textSize="14sp"
+            tools:text="开团"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:textColor="#555659"
+        android:textSize="13sp"
+        tools:text="团长开团后可以将团链接分享给好友，好友也购买该商品即为参团。参团的团员也可以分享团链接邀请更多好友参加。" />
+
+</LinearLayout>

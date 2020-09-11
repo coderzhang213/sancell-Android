@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:layout_marginTop="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/image_coupon_list_usable_1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_voucher_coin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FA1905"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:text="20元" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_voucher_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FA1905"
+                    android:textSize="14sp"
+                    tools:text="满1000元可用" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/image_coupon_list_usable_2"
+            android:paddingLeft="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_voucher_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:maxLength="15"
+                android:textColor="@color/text_main"
+                android:textSize="14sp"
+                tools:text="代金券标题限制字数最多十五个字" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_voucher_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_voucher_title"
+                android:textColor="@color/color_text6"
+                android:textSize="11sp"
+                tools:text="限定商品" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_voucher_use_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="8dp"
+                tools:text="2020.05.23-2020.05.30"
+                android:textColor="#87898C"
+                android:textSize="11sp" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_chose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="12dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/selector_voucher_dialog_change" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

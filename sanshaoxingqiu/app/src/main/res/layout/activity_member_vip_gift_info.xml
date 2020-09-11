@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="cn.sancell.xingqiu.usermember.MemberVipGiftInfoActivity">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlEnableScrollContentWhenLoaded="true"
+        tools:context="cn.sancell.xingqiu.homepage.ProductListActivity">
+
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="Translate"
+            app:srlPrimaryColor="@color/color_BEBFBE" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_product_infopics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:divider="@null"
+            android:listSelector="@color/colorTran"
+            android:scrollbars="none" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:paddingBottom="10dp">
+
+        <CheckBox
+            android:id="@+id/cb_isagree"
+            android:layout_width="18dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="16dp"
+            android:button="@drawable/checkbox_member_buy_agreement_selector"
+            android:checked="false"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/cb_isagree"
+            android:includeFontPadding="false"
+            android:text="购买即视为同意"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/btn_member_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/tv_tip"
+            android:includeFontPadding="false"
+            android:text="芙蓉会粉丝协议"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_and"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/btn_member_protocol"
+            android:includeFontPadding="false"
+            android:text="@string/and"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/btn_point_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/tv_and"
+            android:autoLink="all"
+            android:includeFontPadding="false"
+            android:text="红包使用协议"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/iv_buy_pic"
+            android:layout_width="367dp"
+            android:layout_height="66dp"
+            android:layout_below="@+id/cb_isagree"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:scaleType="fitXY" />
+
+        <cn.sancell.xingqiu.widget.RelativeSizeTextView
+            android:id="@+id/tv_bottom_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_buy_pic"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/sdv_pic"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_24"
+            fresco:startText="¥"
+            fresco:start_proportion="0.67"
+            fresco:start_text_color="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tv_no_stock"
+            android:layout_width="343dp"
+            android:layout_height="42dp"
+            android:layout_below="@+id/cb_isagree"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_stroke3_20"
+            android:gravity="center"
+            android:text="已抢光"
+            android:visibility="gone"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_15" />
+
+        <RelativeLayout
+            android:id="@+id/rl_other_status"
+            android:layout_width="343dp"
+            android:layout_height="42dp"
+            android:layout_below="@+id/cb_isagree"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@mipmap/icon_member_gift_info_wait_buy_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_buy_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_buy_time_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_buy_time"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/tv_buy_time"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_13" />
+
+            <cn.sancell.xingqiu.widget.RelativeSizeTextView
+                android:id="@+id/tv_limit_time_bottom_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_24"
+                fresco:startText="¥"
+                fresco:start_proportion="0.67"
+                fresco:start_text_color="@color/colorWhite" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/shape_im_address_top_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_create_team"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@mipmap/icon_im_create_team"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/im_create_team"
+            android:textColor="@color/color_text1"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_find_team"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@mipmap/icon_im_find_team"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/im_find_new_team"
+            android:textColor="@color/color_text1"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_im_message"
+                android:drawablePadding="8dp"
+                android:text="@string/im_message"
+                android:textColor="@color/color_text1"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/v_message_dot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignRight="@+id/tv_message"
+                android:layout_marginTop="-4dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_message_red_dot"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_book"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tb_book"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:elevation="1dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:tabBackground="@color/transparent"
+            app:tabIndicator="@drawable/shape_im_address_book_indicator"
+            app:tabIndicatorColor="@color/color_F5320A"
+            app:tabIndicatorGravity="bottom"
+            app:tabPaddingBottom="5dp"
+            app:tabRippleColor="@color/transparent"
+            app:tabSelectedTextColor="@color/color_F5320A"
+            app:tabTextColor="@color/color_text1" />
+    </androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>

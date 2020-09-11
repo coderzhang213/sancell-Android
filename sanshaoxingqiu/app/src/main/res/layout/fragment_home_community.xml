@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_stroke5"
+    android:fitsSystemWindows="false">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlEnableScrollContentWhenLoaded="true">
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_top"
+                            android:layout_width="375dp"
+                            android:layout_height="210dp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_group_message"
+                            android:layout_width="94dp"
+                            android:layout_height="106dp"
+                            android:layout_below="@+id/iv_top"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="51dp"
+                                android:layout_height="51dp"
+                                android:src="@mipmap/icon_group_message" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:includeFontPadding="false"
+                                android:text="@string/group_message_title"
+                                android:textColor="@color/color_text1"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_create_group"
+                            android:layout_width="94dp"
+                            android:layout_height="106dp"
+                            android:layout_below="@+id/iv_top"
+                            android:layout_toRightOf="@+id/ll_group_message"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="51dp"
+                                android:layout_height="51dp"
+                                android:src="@mipmap/icon_create_group" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:includeFontPadding="false"
+                                android:text="@string/create_group_title"
+                                android:textColor="@color/color_text1"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_lookfor_group"
+                            android:layout_width="94dp"
+                            android:layout_height="106dp"
+                            android:layout_below="@+id/iv_top"
+                            android:layout_toRightOf="@+id/ll_create_group"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="51dp"
+                                android:layout_height="51dp"
+                                android:src="@mipmap/icon_lookfor_group" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:includeFontPadding="false"
+                                android:text="@string/lookfor_group_title"
+                                android:textColor="@color/color_text1"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_address_book"
+                            android:layout_width="94dp"
+                            android:layout_height="106dp"
+                            android:layout_below="@+id/iv_top"
+                            android:layout_toRightOf="@+id/ll_lookfor_group"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="51dp"
+                                android:layout_height="51dp"
+                                android:src="@mipmap/icon_address_book" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:includeFontPadding="false"
+                                android:text="@string/address_book_title"
+                                android:textColor="@color/color_text1"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_group_message"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/round_white_8">
+
+                            <TextView
+                                android:id="@+id/tv_recommend_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="16dp"
+                                android:includeFontPadding="false"
+                                android:text="群组推荐"
+                                android:textColor="@color/color_text1"
+                                android:textSize="@dimen/sp_18" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_toRightOf="@+id/tv_recommend_title"
+                                android:includeFontPadding="false"
+                                android:text="分享好物经验更快捷"
+                                android:textColor="@color/color_text3"
+                                android:textSize="@dimen/sp_12" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="22dp"
+                                android:layout_toLeftOf="@+id/iv_toright"
+                                android:includeFontPadding="false"
+                                android:text="@string/more_title"
+                                android:textColor="@color/color_text3"
+                                android:textSize="@dimen/sp_12" />
+
+                            <ImageView
+                                android:id="@+id/iv_toright"
+                                android:layout_width="6dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@mipmap/icon_homepage_toright" />
+
+                            <View
+                                android:id="@+id/btn_recomm_more"
+                                android:layout_width="40dp"
+                                android:layout_height="34dp"
+                                android:layout_alignParentRight="true"
+                                android:clickable="true" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rcv_recomm_group_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_recommend_title"
+                                android:layout_marginTop="16dp"
+                                android:divider="@null"
+                                android:listSelector="@color/colorTran"
+                                android:scrollbars="none" />
+
+                            <SeekBar
+                                android:id="@+id/slide_indicator_point"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rcv_recomm_group_list"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/round_color_stroke1_2"
+                                android:maxHeight="3dp"
+                                android:minHeight="3dp"
+                                android:paddingStart="0dp"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/round_color_stroke1_2"
+                                android:splitTrack="false"
+                                android:thumb="@drawable/recomm_group_bar_thumb"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/tv_video_title"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/rl_recomm_group"-->
+                        <!--android:layout_marginTop="24dp"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:textSize="@dimen/sp_16"-->
+                        <!--android:includeFontPadding="false"-->
+                        <!--android:textColor="@color/color_F5320A"-->
+                        <!--android:text="视频"/>-->
+
+                        <!--<View-->
+                        <!--android:id="@+id/view_line"-->
+                        <!--android:layout_width="32dp"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:layout_below="@+id/tv_video_title"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:background="@drawable/round_color_f5320a_4"/>-->
+
+
+                    </RelativeLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tb_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:tabBackground="@color/transparent"
+                    app:tabIndicator="@drawable/shape_im_address_book_indicator"
+                    app:tabIndicatorColor="@color/color_F5320A"
+                    app:tabIndicatorGravity="bottom"
+                    app:tabPaddingBottom="10dp"
+                    app:tabRippleColor="@color/transparent"
+                    app:tabSelectedTextColor="@color/color_F5320A"
+                    app:tabTextColor="@color/color_text1" />
+            </androidx.viewpager.widget.ViewPager>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</FrameLayout>

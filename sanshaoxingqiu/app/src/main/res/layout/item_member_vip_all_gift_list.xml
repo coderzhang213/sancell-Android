@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="12dp">
+
+    <TextView
+        android:id="@+id/tv_limit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_color_f17000_10"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_limit_status"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_F17000"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_below="@+id/tv_limit_status"
+        android:background="@drawable/round_white_8" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_pic"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:layout_below="@+id/tv_limit_status"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@color/colorWhite"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/colorWhite"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="8dp"
+        fresco:viewAspectRatio="1" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/sdv_pic"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/sdv_pic"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:text="lsla"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/sdv_pic"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="3"
+        android:minLines="3"
+        android:textColor="@color/color_text6"
+        android:textSize="@dimen/sp_12" />
+
+    <ImageView
+        android:id="@+id/iv_normal_mark"
+        android:layout_width="115dp"
+        android:layout_height="24dp"
+        android:layout_alignBottom="@+id/sdv_pic"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@+id/sdv_pic"
+        android:src="@mipmap/icon_member_vipgift_alllist_look_mark" />
+
+
+    <cn.sancell.xingqiu.widget.NumberDinRegularTextView
+        android:id="@+id/tv_price_market"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sdv_pic"
+        android:layout_toRightOf="@+id/sdv_pic"
+        android:textColor="@color/color_text5"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

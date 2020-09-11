@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    app:ignore="NamespaceTypo">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_pic"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/square_color_f9f7f3"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@color/colorTran"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/colorTran"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:viewAspectRatio="1" />
+
+    <ImageView
+        android:id="@+id/iv_ranking_mark"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_alignLeft="@+id/sdv_pic"
+        android:layout_alignTop="@+id/sdv_pic" />
+    
+    <ImageView
+        android:layout_width="105dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/sdv_pic"
+        android:src="@mipmap/icon_homepage_hot_sell_item_text_bg"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_alignLeft="@+id/sdv_pic"
+        android:layout_alignRight="@+id/sdv_pic"
+        android:layout_below="@+id/sdv_pic"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/color_936B31"
+        android:textSize="@dimen/sp_12" />
+
+    <RelativeLayout
+        android:id="@+id/rl_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true">
+
+        <cn.sancell.xingqiu.widget.RelativeSizeTextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:gravity="bottom"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_936B31"
+            android:textSize="@dimen/sp_14"
+            fresco:startText="¥"
+            fresco:start_proportion="1"
+            fresco:start_text_color="@color/color_936B31" />
+
+        <TextView
+            android:id="@+id/tv_not_member_price_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignBottom="@+id/tv_price"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/tv_price"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="起"
+            android:textColor="@color/color_936B31"
+            android:textSize="@dimen/sp_11" />
+    </RelativeLayout>
+
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_price_orig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_price"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/color_text4"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

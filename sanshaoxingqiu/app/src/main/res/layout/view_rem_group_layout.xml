@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_group_icon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tv_statues"
+        android:layout_toRightOf="@+id/iv_group_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三少买单①群"
+            android:textColor="#242526"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_group_aved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="平台福利大放送，会员抢先体验" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_statues"
+        android:layout_width="72dp"
+        android:layout_height="28dp"
+        android:background="@mipmap/icon_join_group_chat"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="12sp" />
+</RelativeLayout>

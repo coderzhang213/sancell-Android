@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="cn.sancell.xingqiu.homepage.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_black_back" />
+
+        <EditText
+            android:id="@+id/ed_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_search"
+            android:layout_toRightOf="@+id/btn_back"
+            android:background="@drawable/round_fafbfa_4"
+            android:gravity="center_vertical"
+            android:hint="澳司迪 进口牛腱肉"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="35dp"
+            android:singleLine="true"
+            android:textColor="@color/color_text1"
+            android:textColorHint="@color/color_text4"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/iv_delete_keyword"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@+id/tv_search"
+            android:src="@mipmap/icon_delete_keyword"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="搜索"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_search"
+            android:background="@color/color_stroke2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_histroy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="历史搜索"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_16" />
+
+        <ImageView
+            android:id="@+id/iv_delete_histroy"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:src="@mipmap/icon_delete_history" />
+
+        <cn.sancell.xingqiu.widget.LabelsView
+            android:id="@+id/labels_histroy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_delete_histroy"
+            android:layout_marginTop="14dp"
+            app:isIndicator="true"
+            app:labelBackground="@drawable/label_bg"
+            app:labelTextColor="@drawable/label_text_color"
+            app:labelTextPaddingBottom="5dp"
+            app:labelTextPaddingLeft="20dp"
+            app:labelTextPaddingRight="20dp"
+            app:labelTextPaddingTop="5dp"
+            app:labelTextSize="@dimen/sp_14"
+            app:lineMargin="8dp"
+            app:selectType="NONE"
+            app:wordMargin="8dp" />
+
+        <TextView
+            android:id="@+id/tv_more_histroy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labels_histroy"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/icon_sort_general_no"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="16dp"
+            android:text="更多搜索历史"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_11" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_histroy"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门搜索"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+
+        <cn.sancell.xingqiu.widget.LabelsView
+            android:id="@+id/labels_hot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:isIndicator="true"
+            app:labelBackground="@drawable/label_bg"
+            app:labelTextColor="@drawable/label_text_color"
+            app:labelTextPaddingBottom="5dp"
+            app:labelTextPaddingLeft="20dp"
+            app:labelTextPaddingRight="20dp"
+            app:labelTextPaddingTop="5dp"
+            app:labelTextSize="@dimen/sp_14"
+            app:lineMargin="8dp"
+            app:selectType="NONE"
+            app:wordMargin="8dp" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/network_error"
+        layout="@layout/layout_error_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

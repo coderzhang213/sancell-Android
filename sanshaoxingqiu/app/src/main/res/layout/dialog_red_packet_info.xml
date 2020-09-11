@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_color_white_tr_tl_8">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/round_color_stroke5_tr_tl_8"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="购物送红包"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_close"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="18dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="18dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_productinfo_dialog_close" />
+
+    <ScrollView
+        android:id="@+id/sv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_dialog_close"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="24dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:layout_width="375dp"
+                android:layout_height="303dp"
+                android:src="@mipmap/icon_red_packet_rule" />
+
+            <!--<com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_detailinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@color/color_stroke4"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@color/color_stroke4"
+                fresco:placeholderImageScaleType="fitXY"
+                />-->
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_know"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/sv_info"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/theme_btn_click_style"
+        android:gravity="center"
+        android:text="我知道了"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

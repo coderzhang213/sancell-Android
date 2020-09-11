@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_par"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/live_mar"
+    android:layout_marginRight="@dimen/live_mar"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/live_list_bg_btn_press"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_left"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp">
+
+            <cn.sancell.xingqiu.widget.roundimageview.RoundedImageView
+                android:id="@+id/iv_live"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:scaleType="fitXY"
+                app:riv_corner_radius_bottom_left="10dp"
+                app:riv_corner_radius_top_left="10dp" />
+
+            <cn.sancell.xingqiu.widget.roundimageview.RoundedImageView
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/bg_su"
+                app:riv_corner_radius_bottom_left="10dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_audience_num"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp"
+                tools:text="1001" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_live_top_view" />
+
+        <include layout="@layout/include_replay_top_view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/rl_left"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_text1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="心动穿搭上线，初秋随性之美初秋随性之美" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_alignStart="@+id/tv_title"
+            android:layout_alignEnd="@+id/tv_title"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_text3"
+            android:textSize="13sp"
+            tools:text="适合小仙女的初级，抗老护肤品适合小仙女的初级抗老护肤品适合小仙女的初级" />
+
+        <LinearLayout
+            android:id="@+id/ll_goods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rl_left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/rl_left"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_goods_thr"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_goods_two"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_goods_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/live_all_bg"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

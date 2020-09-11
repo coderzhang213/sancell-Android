@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_empty_invite_friend"
+        android:layout_marginTop="94dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_empty_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="没有搜索到相关的内容"
+        android:layout_marginTop="18dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_second_fun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#555659"
+        android:textSize="13sp"
+        android:layout_marginTop="40dp"
+        tools:text="other"
+        android:gravity="center"
+        android:drawablePadding="5dp"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

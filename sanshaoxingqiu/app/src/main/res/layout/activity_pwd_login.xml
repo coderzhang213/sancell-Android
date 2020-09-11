@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    tools:context=".login.PwdLoginActivity">
+
+    <View
+        android:id="@+id/empty"
+        android:layout_width="375dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/empty"
+        android:includeFontPadding="false"
+        android:text="@string/login_title"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_28" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="4dp"
+        android:includeFontPadding="false"
+        android:text="@string/login_tip"
+        android:textColor="@color/color_7E807E"
+        android:textSize="@dimen/sp_13" />
+
+    <EditText
+        android:id="@+id/ed_login_mobile"
+        style="@style/editText_phone"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginTop="40dp" />
+
+    <ImageView
+        android:id="@+id/iv_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_alignBottom="@+id/ed_login_mobile"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ed_login_mobile"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_delete_phone"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/login_line"
+        android:layout_below="@+id/ed_login_mobile" />
+
+    <EditText
+        android:id="@+id/ed_pwd"
+        style="@style/editText_pwd"
+        android:layout_below="@+id/view_line"
+        android:hint="@string/input_login_pwd_hint" />
+
+    <CheckBox
+        android:id="@+id/cb_password"
+        style="@style/PwdCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_pwd"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ed_pwd"
+        android:layout_below="@+id/ed_login_mobile"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_clear_pwd"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ed_pwd"
+        android:layout_alignTop="@+id/ed_pwd"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/cb_password"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_delete_phone"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view_line1"
+        style="@style/login_line"
+        android:layout_below="@+id/ed_pwd" />
+
+    <TextView
+        android:id="@+id/btn_code_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line1"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/code_login"
+        android:textColor="@drawable/tv_click_style"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/btn_reset_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view_line1"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/pwd_reset"
+        android:textColor="@drawable/tv_click_style"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/btn_login"
+        style="@style/login_btn"
+        android:layout_below="@+id/btn_code_login"
+        android:layout_marginTop="32dp"
+        android:text="@string/login" />
+
+
+
+    <ImageView
+        android:id="@+id/btn_weixin_login"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/ll_login_agree_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/weixin_login_btn_click_style" />
+
+    <LinearLayout
+        android:id="@+id/ll_login_agree_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_agree_tip"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/btn_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:text="@string/login_protocol_tip"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/and"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/btn_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:text="@string/login_privacy_tip"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

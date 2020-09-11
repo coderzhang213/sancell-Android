@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/tv_give_f"
+        android:gravity="center"
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/live_list_give_shape"
+        android:text="立即预约"
+        android:textColor="@color/color_theme"
+        android:textSize="10sp" />
+</RelativeLayout>

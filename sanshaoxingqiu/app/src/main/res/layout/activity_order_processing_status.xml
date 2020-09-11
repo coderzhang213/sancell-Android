@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.sancell.xingqiu.homeuser.OrderProcessingStatusActivity">
+
+    <View
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:background="@color/color_theme" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorTran">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_white_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="进度详情"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_15" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_status_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_16" />
+
+    <ImageView
+        android:id="@+id/iv_status_mark"
+        android:layout_width="375dp"
+        android:layout_height="36dp"
+        android:src="@mipmap/icon_order_processing_status1"
+        android:layout_below="@+id/tv_status_name"
+        android:layout_marginTop="24dp"></ImageView>
+
+
+
+</RelativeLayout>

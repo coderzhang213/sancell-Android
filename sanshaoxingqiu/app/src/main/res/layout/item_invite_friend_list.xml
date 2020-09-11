@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="25dp"
+    android:paddingTop="12dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/tv_friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_invite_total_count"
+        android:text="15600009999"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_friend_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_invite_total_count"
+        android:layout_marginLeft="147dp"
+        android:text="2019-11-11"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_friend_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_invite_total_count"
+        android:layout_alignParentRight="true"
+        android:text="银猩VIP"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16" />
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/round_white_8"
+    android:paddingBottom="16dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="16dp">
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_red_packet_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_24"
+        fresco:start_text_color="@color/color_theme"
+        fresco:startText="¥" />
+
+
+    <TextView
+        android:id="@+id/tv_red_packet_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_red_packet_price"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/tv_red_packet_price"
+        android:textColor="@color/color_text5"
+        android:textSize="@dimen/sp_12" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_red_packet_price"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/color_stroke2" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_product_pic"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@color/color_stroke5"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/color_stroke5"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="8dp"
+        fresco:viewAspectRatio="1" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/riv_user_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line"
+        android:src="@mipmap/icon_default_photo"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@mipmap/icon_default_photo"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@mipmap/icon_default_photo"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/tv_red_packet_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginRight="72dp"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        android:textColor="@color/color_text5"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_red_packet_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_red_packet_title"
+        android:layout_marginTop="8dp"
+        android:text="确认收货后7天红包自动结算"
+        android:textColor="@color/color_text3"
+        android:visibility="gone"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_order_look"
+        android:layout_width="56dp"
+        android:layout_height="16dp"
+        android:layout_below="@+id/tv_red_packet_status"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/round_color_text4_9_stroke1"
+        android:gravity="center"
+        android:text="查看订单"
+        android:visibility="gone"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_11" />
+
+
+</RelativeLayout>

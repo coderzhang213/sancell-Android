@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="548dp"
+    android:background="@drawable/round_color_white_tr_tl_8"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/round_color_stroke5_tr_tl_8"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="发票"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_close"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="18dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="18dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_productinfo_dialog_close" />
+
+
+    <ScrollView
+        android:id="@+id/sv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_dialog_close">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_type_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:includeFontPadding="false"
+                android:text="发票类型"
+                android:textColor="@color/color_text1"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioGroup
+                android:id="@+id/rg_invoice_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_type_tip"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_type_no"
+                    android:layout_width="72dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/radio_invoice_bg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="不开发票"
+                    android:textColor="@drawable/color_invoice_selector"
+                    android:textSize="@dimen/sp_12" />
+
+                <RadioButton
+                    android:id="@+id/rb_type_normal"
+                    android:layout_width="72dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/radio_invoice_bg"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="普通发票"
+                    android:textColor="@drawable/color_invoice_selector"
+                    android:textSize="@dimen/sp_12" />
+            </RadioGroup>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rg_invoice_type"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_title_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="发票抬头"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_12" />
+
+                <RadioGroup
+                    android:id="@+id/rg_invoice_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title_tip"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_title_personal"
+                        android:layout_width="72dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/radio_invoice_bg"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="个人"
+                        android:textColor="@drawable/color_invoice_selector"
+                        android:textSize="@dimen/sp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_title_company"
+                        android:layout_width="72dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="12dp"
+                        android:background="@drawable/radio_invoice_bg"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="企业"
+                        android:textColor="@drawable/color_invoice_selector"
+                        android:textSize="@dimen/sp_12" />
+                </RadioGroup>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_company_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_invoice_title"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_company_name_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="11dp"
+                        android:text="单位名称"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_11" />
+
+
+                    <EditText
+                        android:id="@+id/ed_company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@+id/tv_company_id_tip"
+                        android:background="@null"
+                        android:maxLength="50"
+                        android:gravity="center_vertical"
+                        android:hint="请填写单位名称"
+                        android:textColor="@color/color_text1"
+                        android:textColorHint="@color/color_stroke1"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="@dimen/sp_11" />
+
+                    <TextView
+                        android:id="@+id/tv_company_id_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_company_name_tip"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="11dp"
+                        android:text="纳税人识别号"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_11" />
+
+
+                    <EditText
+                        android:id="@+id/ed_company_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/tv_company_name_tip"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@+id/tv_company_id_tip"
+                        android:background="@null"
+                        android:maxLength="18"
+                        android:gravity="center_vertical"
+                        android:hint="请填写纳税人识别号"
+                        android:textColor="@color/color_text1"
+                        android:textColorHint="@color/color_function_error"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="@dimen/sp_11" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_taker_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_company_info"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="收票人信息"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/tv_taker_phone_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_taker_tip"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="11dp"
+                    android:text="手机号"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_11" />
+
+
+                <EditText
+                    android:id="@+id/ed_taker_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/tv_taker_tip"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/tv_taker_phone_tip"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="@color/color_text1"
+                    android:textColorHint="@color/color_stroke1"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textSize="@dimen/sp_11" />
+
+                <TextView
+                    android:id="@+id/tv_taker_email_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_taker_phone_tip"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="11dp"
+                    android:text="邮箱"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_11" />
+
+
+                <EditText
+                    android:id="@+id/ed_taker_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/tv_taker_phone_tip"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/tv_taker_phone_tip"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="用来接收电子发票邮件，可选填"
+                    android:textColor="@color/color_text1"
+                    android:textColorHint="@color/color_stroke1"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textSize="@dimen/sp_11" />
+
+                <TextView
+                    android:id="@+id/tv_invoice_content_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_taker_email_tip"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="发票内容"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_12" />
+
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/tv_invoice_content_tip"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_color_e6ffef_theme_stroke1"
+                    android:gravity="center"
+                    android:text="商品明细"
+                    android:textColor="@color/color_theme"
+                    android:textSize="@dimen/sp_12" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_invoice_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_sure"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:drawablePadding="4dp"
+        android:drawableRight="@mipmap/icon_invoice_tip_mark"
+        android:includeFontPadding="false"
+        android:text="发票须知"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_12" />
+
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="343dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/theme_btn_click_style"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_15" />
+
+</RelativeLayout>
+
+

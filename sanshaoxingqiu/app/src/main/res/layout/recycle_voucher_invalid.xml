@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:layout_marginTop="12dp">
+    <LinearLayout
+        android:id="@+id/ll_voucher_in_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_info"
+        android:visibility="gone"
+        android:layout_marginTop="-8dp"
+        android:background="@mipmap/image_coupon_bg_list_unusable_explain">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_voucher_in_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="该代金券不能针对活动品、换购商品使用。仅限活动期间内使用，不可兑换。最终解释权归平台所有"
+            android:textColor="@color/text_second"
+            android:textSize="11sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/image_coupon_list_unusable"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_voucher_in_coin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="30sp"
+                    tools:text="20"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_voucher_in_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="11sp"
+                    tools:text="满1000元可用" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:background="@mipmap/image_coupon_list_unusable_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_voucher_in_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:maxLength="15"
+                android:textColor="#BABCBF"
+                android:textSize="14sp"
+                tools:text="代金券标题限制字数最多十五个字" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_voucher_in_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_voucher_in_title"
+                android:textColor="#BABCBF"
+                android:textSize="11sp"
+                tools:text="限定商品" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_voucher_in_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="8dp"
+                android:text="2020.05.23-2020.05.30"
+                android:textColor="#BABCBF"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_voucher_in_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="详细说明"
+                    android:textColor="#BABCBF"
+                    android:textSize="10sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_voucher_in_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="17dp"
+                    android:src="@mipmap/icon_more_couponlist_unfold_unusable" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_voucher_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="14dp"
+                android:src="@mipmap/image_expired_couponlist_unusable" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

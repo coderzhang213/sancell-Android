@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_pin_info"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/icon_pin_top_price">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_goods_one_star"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/iv_pin"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pin_real_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:text="¥166.00"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pin_line_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="¥166.00"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_pin_real_price"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pin_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:background="@drawable/shape_goods_pin_member_bg"
+            tools:text="3人团"
+            android:layout_toRightOf="@+id/tv_pin_real_price"
+            android:layout_marginLeft="8dp"
+            android:layout_alignBottom="@+id/tv_pin_real_price"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_goods_pin_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="限量100件"
+            android:layout_toRightOf="@+id/tv_pin_line_price"
+            android:layout_marginLeft="8dp"
+            android:layout_alignBottom="@+id/tv_pin_line_price"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pin_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:text="结束时间" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pin_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                tools:text="01.18 00:00"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/tv_pin_end"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

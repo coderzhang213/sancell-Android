@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <View
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@color/color_theme" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorTran">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_white_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pay_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_success_mark"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/rl_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tv_actual_price_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_success_mark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="实付款"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_14" />
+
+
+    <cn.sancell.xingqiu.widget.RelativeSizeTextView
+        android:id="@+id/tv_actual_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_actual_price_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_30"
+        android:textStyle="bold"
+        app:startText="¥"
+        app:start_proportion="0.66"
+        app:start_text_color="@color/colorWhite" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_actual_price"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_white_8"
+        android:paddingBottom="24dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="34dp"
+        android:paddingTop="24dp">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@+id/tv_address_name"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/oval_d7bf9e" />
+
+        <TextView
+            android:id="@+id/tv_address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_logisticsinfo"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/iv1"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_address_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_address_name"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/tv_address_name"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_address_name"
+            android:layout_below="@+id/tv_address_name"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="215dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="支付失败"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_15" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_order_detail"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:layout_above="@+id/tv_continue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_theme_20"
+        android:gravity="center"
+        android:text="@string/look_detail"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_continue"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/round_theme_20"
+        android:gravity="center"
+        android:text="@string/goon_shopping"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_14" />
+
+    <include
+        android:id="@+id/network_error"
+        layout="@layout/layout_error_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:visibility="gone" />
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:visibility="gone"/>
+</RelativeLayout>

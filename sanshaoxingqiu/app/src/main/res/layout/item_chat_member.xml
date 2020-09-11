@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true">
+
+        <cn.sancell.xingqiu.live.widget.CircleImageView
+            android:id="@+id/circle_image_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/avatar_def" />
+
+        <ImageView
+            android:id="@+id/iv_forbidden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/ic_forbidden" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_img"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="爱丽丝"
+        android:textColor="@color/white"
+        android:textSize="9sp" />
+</RelativeLayout>

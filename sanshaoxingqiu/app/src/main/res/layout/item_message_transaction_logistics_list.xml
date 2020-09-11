@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/round_white_8"
+    android:paddingBottom="20dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/tv_logistics_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_text5"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tv_logistics_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_logistics_status"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_13" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_logistics_status"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/color_stroke2" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_product_pic"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@color/color_stroke5"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@color/color_stroke5"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="8dp"
+        fresco:viewAspectRatio="1" />
+
+    <TextView
+        android:id="@+id/tv_logistics_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/sdv_product_pic"
+        android:ellipsize="middle"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        android:textColor="@color/color_text5"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_evaluate_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_logistics_title"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/sdv_product_pic"
+        android:text="快来评价获取红包吧"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_evaluate"
+        android:layout_width="64dp"
+        android:layout_height="24dp"
+        android:layout_alignBottom="@+id/sdv_product_pic"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:background="@drawable/theme_btn_click_style"
+        android:gravity="center"
+        android:text="去评价"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_evaluated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sdv_product_pic"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="已评价"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_logistics_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_logistics_title"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@+id/sdv_product_pic"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_11" />
+
+</RelativeLayout>

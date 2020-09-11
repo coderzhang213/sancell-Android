@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAF9F6"
+    tools:context="cn.sancell.xingqiu.homeuser.InviteFriendActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_black_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:maxWidth="250dp"
+            android:singleLine="true"
+            android:text="邀请好友"
+            android:textColor="@color/color_text1" />
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlEnableScrollContentWhenLoaded="true">
+
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="Translate"
+            app:srlPrimaryColor="@color/color_BEBFBE" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="246dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_invite_friend_top" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_center"
+                    android:layout_width="337dp"
+                    android:layout_height="278dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="198dp"
+                    android:background="@mipmap/icon_invite_friend_center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="22dp"
+                        android:text="我的会员ID"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_14" />
+
+                    <cn.sancell.xingqiu.widget.NumberDinMediumTextView
+                        android:id="@+id/tv_user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="46dp"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/color_text1"
+                        android:textSize="@dimen/sp_40" />
+
+                    <TextView
+                        android:id="@+id/tv_copy_id"
+                        android:layout_width="100dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginRight="28dp"
+                        android:background="@drawable/invite_friend_btn_selector"
+                        android:gravity="center"
+                        android:text="@string/copy_title"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_14" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_step"
+                    android:layout_width="375dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/rl_center"
+                    android:layout_marginTop="24dp"
+                    android:src="@mipmap/icon_invite_friend_step" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_below="@+id/iv_step"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/color_F3F1E9"
+                    android:gravity="bottom"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_invite_total_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邀请记录 0"
+                        android:textColor="#19191A"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_query_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawableRight="@mipmap/icon_toright_next"
+                        android:drawablePadding="3dp"
+                        android:text="查看全部"
+                        android:textColor="#87898C"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_name_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_all"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="16dp"
+                    android:text="接受好友"
+                    android:textColor="@color/color_A19D8A"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_time_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_all"
+                    android:layout_marginLeft="172dp"
+                    android:layout_marginTop="16dp"
+                    android:text="接受时间"
+                    android:textColor="@color/color_A19D8A"
+                    android:textSize="@dimen/sp_14"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_level_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_all"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="25dp"
+                    android:text="好友等级"
+                    android:textColor="@color/color_A19D8A"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_no_friends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name_tip"
+                    android:layout_marginBottom="100dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="16dp"
+                    android:text="暂无记录"
+                    android:textColor="@color/color_A19D8A"
+                    android:textSize="@dimen/sp_14" />
+
+                <cn.sancell.xingqiu.widget.MaxRecyclerView
+                    android:id="@+id/rcv_invite_friend_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name_tip"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="100dp"
+                    android:divider="@null"
+                    android:listSelector="@color/colorTran"
+                    android:scrollbars="none"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_stroke4"
+            app:srlClassicsSpinnerStyle="Translate" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/invite_friend_btn_selector"
+        android:gravity="center"
+        android:text="@string/invite_friend_tip"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_14" />
+
+    <include
+        android:id="@+id/network_error"
+        layout="@layout/layout_error_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:visibility="gone" />
+
+</RelativeLayout>

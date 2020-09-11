@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="1dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:elevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingTop="16dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rb_voucher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/selector_voucher_change"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="代金券"
+            android:textColor="@color/text_main"
+            android:textSize="13sp"
+            android:enabled="false"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_voucher_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:src="@mipmap/icon_productinfo_more_mark" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_voucher_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/iv_voucher_more"
+            android:textColor="#87898C"
+            android:textSize="12sp"
+            tools:text="3张可用代金券" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rb_rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rb_voucher"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/selector_voucher_change"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="红包抵扣"
+            android:textColor="@color/text_main"
+            android:textSize="13sp"
+            android:enabled="false"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rp_can_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_rb_rp"
+            android:layout_alignParentRight="true"
+            android:textColor="#87898C"
+            android:textSize="12sp"
+            tools:text="3张可用代金券" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

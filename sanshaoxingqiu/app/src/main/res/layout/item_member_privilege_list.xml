@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="106dp"
+    android:layout_height="116dp"
+    android:id="@+id/sdv_pic"
+    fresco:actualImageScaleType="fitXY"
+    fresco:failureImage="@color/color_stroke4"
+    fresco:failureImageScaleType="fitXY"
+    fresco:placeholderImage="@color/color_stroke4"
+    fresco:placeholderImageScaleType="fitXY"
+    fresco:viewAspectRatio="0.91" />
+

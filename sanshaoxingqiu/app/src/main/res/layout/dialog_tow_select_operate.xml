@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_white_lt_rt_4"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_operate1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+
+    <TextView
+        android:id="@+id/tv_operate2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_stroke4" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ripple_item_single"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+
+</LinearLayout>

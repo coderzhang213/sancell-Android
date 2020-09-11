@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:src="@mipmap/icon_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_profile"
+        android:drawableRight="@mipmap/vip_icon"
+        android:drawablePadding="4dp"
+        android:maxEms="10"
+        android:singleLine="true"
+        android:textColor="#19191A"
+        android:textSize="14sp"
+        tools:text="昵称最大长度水昵称最大长度水水…" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_fans_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_alignStart="@+id/tv_name"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/color_text2"
+        android:textSize="14sp"
+        tools:text="1.6w 粉丝" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_focus"
+        android:layout_width="72dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/live_focus_selector"
+        android:gravity="center"
+        android:textColor="@color/btn_live_focus"
+        tools:text="关注" />
+
+
+</RelativeLayout>

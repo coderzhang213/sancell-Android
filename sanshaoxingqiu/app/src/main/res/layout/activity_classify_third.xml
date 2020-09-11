@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="cn.sancell.xingqiu.homeclassify.ClassifyThirdActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <HorizontalScrollView
+        android:id="@+id/mColumnHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/mRadioGroup_content"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/mColumnHorizontalScrollView"
+        android:background="@color/color_stroke2" />
+
+    <LinearLayout
+        android:id="@+id/ll_sort_general"
+        android:layout_width="94dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/view_line"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_sort_general"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="综合"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/sp_13" />
+
+        <ImageView
+            android:id="@+id/iv_sort_general"
+            android:layout_width="5dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="4dp"
+            android:src="@mipmap/icon_sort_general_yes" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sales"
+        android:layout_width="94dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/view_line"
+        android:layout_toRightOf="@+id/ll_sort_general"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:text="销量"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_13" />
+
+    <LinearLayout
+        android:id="@+id/ll_sort_pirce"
+        android:layout_width="94dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/view_line"
+        android:layout_toRightOf="@+id/tv_sales"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格"
+            android:textColor="@color/color_text3"
+            android:textSize="@dimen/sp_13" />
+
+        <ImageView
+            android:id="@+id/iv_sort_price"
+            android:layout_width="5dp"
+            android:layout_height="11dp"
+            android:layout_marginLeft="4dp"
+            android:src="@mipmap/icon_sort_price" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sort_screening"
+        android:layout_width="94dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/view_line"
+        android:layout_toRightOf="@+id/ll_sort_pirce"
+        android:gravity="center"
+        android:text="筛选"
+        android:textColor="@color/color_text3"
+        android:textSize="@dimen/sp_13" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_sort_general" />
+
+    <include
+        android:id="@+id/network_error"
+        layout="@layout/layout_error_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

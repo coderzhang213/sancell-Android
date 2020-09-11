@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_live_video_looking_status_bg"
+    android:layout_margin="8dp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_looking_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1232w"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="6dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_live_status" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_live_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_home_live_video_status_notice"/>
+
+</RelativeLayout>

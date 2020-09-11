@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/def_dialog_bg_shape"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_hd"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="高清"
+        android:textColor="@color/text_main"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/pager_def_color" />
+
+    <TextView
+        android:id="@+id/tv_sd"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="标清"
+        android:textColor="@color/text_main"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/pager_def_color" />
+
+    <TextView
+        android:id="@+id/tv_ld"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="流畅"
+        android:textColor="@color/text_main"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/pager_def_color" />
+
+    <TextView
+        android:id="@+id/tv_cancer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/text_main"
+        android:textSize="14sp" />
+</LinearLayout>

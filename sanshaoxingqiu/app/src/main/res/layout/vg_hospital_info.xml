@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_hospital"
+    android:background="@drawable/round_white_8"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:paddingLeft="12dp"
+    android:layout_marginTop="12dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_hospital_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="乔丽尔乔丽尔乔丽尔乔丽尔乔丽尔乔丽尔乔丽尔"
+        android:textColor="@color/text_main"
+        android:textSize="13sp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxEms="15"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:drawableRight="@mipmap/icon_more_unusable_couponlist"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_hospital_adr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#7C7D80"
+        tools:text="上海虹口区水电路1388号晟柏科技电晟柏科…"
+        android:layout_toLeftOf="@+id/tv_hospital_phone"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_hospital_name"
+        android:singleLine="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"/>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="#D4D6D9"
+        android:layout_toLeftOf="@+id/tv_hospital_phone"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tv_hospital_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@mipmap/icon_call_common"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp"/>
+
+
+
+</RelativeLayout>

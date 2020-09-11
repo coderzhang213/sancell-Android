@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.sancell.xingqiu.homeuser.AddressEditActivity">
+
+    <TextView
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:text="联系人"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/ed_name"
+        style="@style/editText_text"
+        android:layout_marginLeft="92dp"
+        android:hint="请填写联系人姓名"
+        android:maxLines="1" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ed_name"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+
+    <TextView
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/address_phone"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/ed_phone"
+        style="@style/editText_address_phone"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="92dp"
+        android:hint="请填写联系手机" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ed_phone"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+
+    <TextView
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/line2"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/address_area"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_area"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/line2"
+        android:layout_marginLeft="92dp"
+        android:gravity="center_vertical"
+        android:text="@string/input_address_area_tip"
+        android:textColor="@color/color_text4"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_area"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_stroke1" />
+
+    <TextView
+        android:layout_width="76dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/line3"
+        android:layout_marginLeft="16dp"
+        android:paddingTop="22dp"
+        android:text="@string/address_detail"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/ed_area_detail"
+        style="@style/editText_text"
+        android:layout_height="80dp"
+        android:layout_below="@+id/line3"
+        android:layout_marginLeft="92dp"
+        android:gravity="top"
+        android:hint="@string/input_address_detail_tip"
+        android:maxLines="2"
+        android:paddingTop="22dp" />
+
+    <View
+        android:id="@+id/view_gap"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@+id/ed_area_detail"
+        android:background="@color/color_stroke4" />
+
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/view_gap"
+        android:layout_marginLeft="16dp"
+        android:paddingTop="22dp"
+        android:text="@string/address_label"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_label_jia"
+        android:layout_width="54dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/view_gap"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_color_stroke4_14_stroke1"
+        android:gravity="center"
+        android:text="@string/address_label_home"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/tv_label_company"
+        android:layout_width="54dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/view_gap"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/tv_label_jia"
+        android:background="@drawable/round_color_stroke4_14_stroke1"
+        android:gravity="center"
+        android:text="@string/address_label_company"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/tv_label_school"
+        android:layout_width="54dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/view_gap"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/tv_label_company"
+        android:background="@drawable/round_color_stroke4_14_stroke1"
+        android:gravity="center"
+        android:text="@string/address_label_school"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_12" />
+
+    <LinearLayout
+        android:id="@+id/ll_select_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_label"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_select_default"
+            android:layout_width="34dp"
+            android:layout_height="66dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="16dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_car_select_no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:gravity="center"
+            android:text="设为默认联系人"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_save"
+        style="@style/address_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/address_save" />
+
+</RelativeLayout>

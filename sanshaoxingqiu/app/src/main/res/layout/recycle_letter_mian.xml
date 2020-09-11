@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_marginTop="15dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:src="@mipmap/icon_logo" />
+
+    <View
+        android:id="@+id/red_dot"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignEnd="@+id/iv_img"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/shape_message_red_dot" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/tv_msg_time"
+        android:layout_toRightOf="@+id/iv_img"
+        android:singleLine="true"
+        android:textColor="#111111"
+        android:textSize="15sp"
+        tools:text="杜明" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_user_name"
+        android:layout_alignBottom="@+id/iv_img"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="6dp"
+        android:layout_toLeftOf="@+id/tv_msg_time"
+        android:singleLine="true"
+        android:textColor="@color/color_text6"
+        android:textSize="13sp"
+        tools:text="皮囊要拿来用，这是他存在这个社会的..." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_user_name"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/color_text6"
+        android:textSize="10sp"
+        tools:text="18:22" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/iv_img"
+        android:layout_marginTop="15dp"
+        android:background="#E8EAED" />
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog_conrner_16">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证信息"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/color_text1"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_ver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/nim_edit_text_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="16dp"
+        android:maxLength="30"
+        android:textSize="14sp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textCursorDrawable="@drawable/cursor_shape"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sure"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/robot_link_element_text_blue"/>
+
+
+</LinearLayout>

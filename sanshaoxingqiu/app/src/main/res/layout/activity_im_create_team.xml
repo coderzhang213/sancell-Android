@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="24dp"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_team_name"
+            android:textColor="@color/color_text1"
+            android:textSize="14sp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/must_write_tag"
+            android:textColor="@color/color_E12C25"
+            android:textSize="14sp"
+            android:layout_marginLeft="3dp"/>
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_team_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:maxLines="10"
+        android:background="@drawable/drawable_et_white_bg"
+        android:hint="@string/et_max_input_10"
+        android:textColorHint="@color/color_stroke1"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursor_shape"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/im_team_introduce"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/color_text1"
+        android:textSize="14sp"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:maxLines="14"
+        android:background="@drawable/drawable_et_white_bg"
+        android:hint="@string/et_max_input_14"
+        android:textColorHint="@color/color_stroke1"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursor_shape"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/im_team_announce"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/color_text1"
+        android:textSize="14sp"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_announce"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:maxLines="30"
+        android:background="@drawable/drawable_et_white_bg"
+        android:hint="@string/et_max_input_30"
+        android:textColorHint="@color/color_stroke1"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursor_shape"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="48dp"
+        style="@style/green_btn_22_white"
+        android:text="@string/sure"
+        android:enabled="false"/>
+</LinearLayout>

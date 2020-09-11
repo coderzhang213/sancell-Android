@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_img"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@mipmap/icon_logo"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/text_main"
+        tools:text="韩**路"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_img"
+        android:layout_marginLeft="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:text="@string/join_pin_tuan_team"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:background="@drawable/selector_pin_pink_btn"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_remain_need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pin_need_num"
+        android:textSize="13sp"
+        android:textColor="@color/text_main"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/tv_join"
+        android:layout_marginRight="14dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_remain_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distance_pin_end_time"
+        android:textSize="12sp"
+        android:textColor="@color/text_second"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/tv_join"
+        android:layout_marginRight="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"/>
+
+
+
+</RelativeLayout>

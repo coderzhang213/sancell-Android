@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        renderscriptTargetApi rootProject.ext.android.compileSdkVersion
+        renderscriptSupportModeEnabled true
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res', 'res-ptr2', 'res-chatroom']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    packagingOptions{
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+}
+
+dependencies {
+    api fileTree(include: '*.jar', dir: 'libs')
+    api "androidx.appcompat:appcompat:${ANDROIDX_APPCOMPAT_VERSION}"
+    api "androidx.legacy:legacy-support-v4:${LEGACY_X_VERSION}"
+    api "com.google.android.material:material:${MATERIAL_GOOGLE_VERSION}"
+    api "androidx.constraintlayout:constraintlayout:${CONSTRAINT_X_VERSION}"
+    api rootProject.ext.dependencies["glide"]
+    //    annotationProcessor rootProject.ext.dependencies["annotations"]
+    annotationProcessor rootProject.ext.dependencies["glide_compiler"]
+    //    api 'me.everything:overscroll-decor-android:1.0.4'
+    api 'me.leolin:ShortcutBadger:1.1.22@aar'
+    //api 'jp.wasabeef:glide-transformations:3.0.1'
+    //    api 'com.netease.nimlib:avchat:6.9.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //api 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1' // if you want to use the Glide GPU Filters
+    implementation files('libs/Livestreaming_v2.1.0.jar')
+    implementation files('libs/VideoEffect_v2.2.0.jar')
+    api 'com.alibaba:fastjson:1.2.39'
+    //implementation files('libs/nim-avchat-3.3.0.jar')
+    //  implementation files('libs/nim-avchat-6.10.1.jar')
+    implementation files('libs/universal-image-loader-1.9.5.jar')
+}

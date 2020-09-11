@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <LinearLayout
+        android:id="@+id/ll_nopay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_price_tip"
+        android:background="@color/colorWhite"
+        android:gravity="right"
+        android:paddingRight="16dp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_nopay_cancel"
+            android:layout_width="72dp"
+            android:layout_height="28dp"
+            android:background="@drawable/round_color_stroke4_16_stroke1"
+            android:gravity="center"
+            android:text="取消订单"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_nopay_gopay"
+            android:layout_width="103dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_theme_16_stroke1"
+            android:gravity="center"
+            android:text="去支付"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+</merge>
+

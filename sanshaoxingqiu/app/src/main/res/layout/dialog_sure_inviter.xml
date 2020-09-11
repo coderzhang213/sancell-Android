@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_white_8"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="确认邀请人"
+        android:textColor="@color/color_text1"
+        android:textSize="@dimen/sp_16" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/dialog_riv_inviter_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_default_photo"
+        fresco:failureImage="@mipmap/icon_default_photo"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@mipmap/icon_default_photo"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/dialog_tv_inviter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_riv_inviter_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="我的邀请人"
+        android:textColor="@color/color_text2"
+        android:textSize="@dimen/sp_14" />
+
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="102dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/dialog_tv_inviter_name"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_theme_16_stroke1"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="102dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dialog_tv_inviter_name"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_theme_16"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_13" />
+
+</RelativeLayout>

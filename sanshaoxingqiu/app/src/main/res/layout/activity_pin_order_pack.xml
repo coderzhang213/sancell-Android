@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F7"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_cancel"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_pin_pack_top_bg"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="23dp"
+                android:paddingRight="23dp"
+                android:paddingBottom="38dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_pin_states"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="直拼失败，退款中" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_pin_states_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:text="系统处理中，请耐心等待" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-12dp"
+                android:background="@drawable/shape_pin_top_radius_12"
+                android:paddingLeft="12dp"
+                android:paddingTop="16dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="16dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@mipmap/icon_goods_location" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_name_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_location"
+
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp"
+                    tools:text="方小姐   15633337777" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name_phone"
+                    android:layout_marginTop="7dp"
+                    android:layout_toRightOf="@+id/iv_location"
+                    android:textSize="13sp"
+                    tools:text="上海上海市虹口区水电路1388号晟柏科技园16层水电路1388号" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingTop="15dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="12dp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_order_goods"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/shape_img_line_bg"
+                    android:padding="1dp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/icon_pin_order_tag" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_goods_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@+id/tv_goods_count"
+                    android:layout_toRightOf="@+id/iv_order_goods"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp"
+                    tools:text="韩国制造胶原蛋白精华饮多种口味蓝莓12种口味选择韩国制造胶原蛋白精华饮多种口味蓝莓12种口味选择" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_goods_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_goods_name"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@+id/tv_goods_count"
+                    android:layout_toRightOf="@+id/iv_order_goods"
+                    android:lines="1"
+                    android:textColor="@color/color_text3"
+                    android:textSize="12sp"
+                    tools:text="韩国制造胶原蛋白精华饮多种口" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_order_goods"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/iv_order_goods"
+                    android:textColor="@color/color_text3"
+                    android:textSize="11sp"
+                    tools:text="¥209.00" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_goods_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_order_goods"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="12dp"
+                    android:text="x1"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_order_goods"
+                    android:layout_alignEnd="@+id/iv_order_goods"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/order_remark"
+                    android:textColor="@color/text_main" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_remark_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_order_goods"
+                    android:layout_alignBaseline="@+id/tv_remark"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/tv_remark"
+                    android:hint="@string/choose_write"
+                    android:maxLength="50"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/sp_12"
+                    tools:text="已经和客服联系推迟三天发货，不然送货时间太早家里没人。已经和客服联系推迟三天发货，不然送货时间太早。" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/white">
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderItem
+                    android:id="@+id/vg_order_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderItem
+                    android:id="@+id/vg_time_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderItem
+                    android:id="@+id/vg_pay_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderItem
+                    android:id="@+id/vg_pay_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/white">
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderItem
+                    android:id="@+id/vg_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderItem
+                    android:id="@+id/vg_invoice_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderItem
+                    android:id="@+id/vg_invoice_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/white">
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderPriceItem
+                    android:id="@+id/vg_total_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderPriceItem
+                    android:id="@+id/vg_freight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp" />
+
+                <cn.sancell.xingqiu.order.orderInfo.VgOrderPriceItem
+                    android:id="@+id/vg_rp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="17dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="实付："
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_pay_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="实付："
+                        android:textColor="@color/color_theme"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pin_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape_boarder_btn_white"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="5dp"
+            android:text="取消直拼"
+            android:textColor="@color/text_main" />
+
+    </RelativeLayout>
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rl_success_no_delivery"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:visibility="gone">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/tv_no_delivery_purchase"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="12dp"-->
+    <!--            android:background="@drawable/shape_boarder_btn_white"-->
+    <!--            android:paddingLeft="12dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingRight="12dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:text="取消直拼"-->
+    <!--            android:textColor="@color/text_main" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/tv_no_delivery_cancel"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="12dp"-->
+    <!--            android:layout_toLeftOf="@+id/tv_no_delivery_purchase"-->
+    <!--            android:background="@drawable/shape_boarder_btn_red"-->
+    <!--            android:paddingLeft="12dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingRight="12dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:text="取消直拼"-->
+    <!--            android:textColor="@color/white" />-->
+
+    <!--    </RelativeLayout>-->
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rl_success_start_delivery"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:visibility="gone">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/tv_pin_start_delivery_receive"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="12dp"-->
+    <!--            android:background="@drawable/shape_boarder_btn_white_red_stoke"-->
+    <!--            android:paddingLeft="12dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingRight="12dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:text="确认收货"-->
+    <!--            android:textColor="@color/color_theme" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/tv_pin_look_delivery"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="12dp"-->
+    <!--            android:layout_toLeftOf="@+id/tv_pin_start_delivery_receive"-->
+    <!--            android:background="@drawable/shape_boarder_btn_white"-->
+    <!--            android:paddingLeft="12dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingRight="12dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:text="查看物流"-->
+    <!--            android:textColor="@color/text_main" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/tv_pin_start_delivery_purchase"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="12dp"-->
+    <!--            android:layout_toLeftOf="@+id/tv_pin_look_delivery"-->
+    <!--            android:background="@drawable/shape_boarder_btn_white"-->
+    <!--            android:paddingLeft="12dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingRight="12dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:text="再次购买"-->
+    <!--            android:textColor="@color/text_main" />-->
+
+
+    <!--    </RelativeLayout>-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rl_success_receive"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:visibility="gone">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/tv_pin_already_receive"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="12dp"-->
+    <!--            android:background="@drawable/shape_boarder_btn_white_red_stoke"-->
+    <!--            android:paddingLeft="12dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingRight="12dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:text="确认收货"-->
+    <!--            android:textColor="@color/color_theme" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/tv_pin_evaluate"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="12dp"-->
+    <!--            android:layout_toLeftOf="@+id/tv_pin_already_receive"-->
+    <!--            android:background="@drawable/shape_boarder_btn_white"-->
+    <!--            android:paddingLeft="12dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingRight="12dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:text="查看物流"-->
+    <!--            android:textColor="@color/text_main" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/tv_delete_order"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="12dp"-->
+    <!--            android:layout_toLeftOf="@+id/tv_pin_evaluate"-->
+    <!--            android:background="@drawable/shape_boarder_btn_white"-->
+    <!--            android:paddingLeft="12dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingRight="12dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:text="再次购买"-->
+    <!--            android:textColor="@color/text_main" />-->
+
+    <!--    </RelativeLayout>-->
+
+
+</RelativeLayout>

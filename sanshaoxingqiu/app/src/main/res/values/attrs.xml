@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatusBarHeightView">
+        <attr name="use_type" format="integer">
+            <enum name="use_height" value="0" />
+            <enum name="use_padding_top" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ScaleTextView">
+        <attr name="baseScreenHeight" format="integer" />
+        <attr name="textSizePx" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference" />
+        <attr name="mvAnimDuration" format="integer|reference" />
+        <attr name="mvTextSize" format="dimension|reference" />
+        <attr name="mvTextColor" format="color|reference" />
+        <attr name="mvSingleLine" format="boolean" />
+        <attr name="mvGravity">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RelativeSizeTextView">
+        <!--开头和结束的文本-->
+        <attr name="startText" format="string" />
+        <attr name="endText" format="string" />
+        <!--统一设置开头和结束的tag的比例-->
+        <attr name="proportion" format="float" />
+        <!--开头的文本的比例-->
+        <attr name="start_proportion" format="float" />
+        <!--结束的文本的比例-->
+        <attr name="end_proportion" format="float" />
+        <!--开始文本和结束文本的颜色-->
+        <attr name="start_end_text_color" format="color" />
+        <attr name="start_text_color" format="color" />
+        <attr name="end_text_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="labels_view">
+        <attr name="selectType" format="enum">
+            <enum name="NONE" value="1" />
+            <enum name="SINGLE" value="2" />
+            <enum name="SINGLE_IRREVOCABLY" value="3" />
+            <enum name="MULTI" value="4" />
+        </attr>
+        <attr name="maxSelect" format="integer" />
+        <attr name="minSelect" format="integer" />
+        <attr name="maxLines" format="integer" />
+        <attr name="isIndicator" format="boolean" />
+        <attr name="labelTextColor" format="reference|color" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="labelTextPaddingLeft" format="dimension" />
+        <attr name="labelTextPaddingTop" format="dimension" />
+        <attr name="labelTextPaddingRight" format="dimension" />
+        <attr name="labelTextPaddingBottom" format="dimension" />
+        <attr name="lineMargin" format="dimension" />
+        <attr name="wordMargin" format="dimension" />
+        <attr name="labelBackground" format="reference|color" />
+    </declare-styleable>
+    <!--支付密码的属性-->
+    <declare-styleable name="VerCodeEditText">
+        <attr name="figures" format="integer" />
+        <attr name="verCodeMargin" format="dimension" />
+        <attr name="bottomLineSelectedColor" format="reference" />
+        <attr name="bottomLineNormalColor" format="reference" />
+        <attr name="bottomLineHeight" format="dimension" />
+        <attr name="selectedBackgroundColor" format="reference" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderColor" format="color|reference" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="dividerColor" format="color|reference" />
+        <attr name="showType" format="enum">
+            <enum name="word" value="1" />
+            <enum name="password" value="2" />
+        </attr>
+        <attr name="showStyle" format="enum">
+            <enum name="set" value="1" />
+            <enum name="pay" value="2" />
+        </attr>
+        <attr name="pointRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SwitchButton">
+        <attr name="kswThumbDrawable" format="reference" />
+        <attr name="kswThumbColor" format="color|reference" />
+        <attr name="kswThumbMargin" format="dimension|reference" />
+        <attr name="kswThumbMarginTop" format="dimension|reference" />
+        <attr name="kswThumbMarginBottom" format="dimension|reference" />
+        <attr name="kswThumbMarginLeft" format="dimension|reference" />
+        <attr name="kswThumbMarginRight" format="dimension|reference" />
+        <attr name="kswThumbWidth" format="dimension|reference" />
+        <attr name="kswThumbHeight" format="dimension|reference" />
+        <attr name="kswThumbRadius" format="dimension|reference" />
+        <attr name="kswBackRadius" format="dimension|reference" />
+        <attr name="kswBackDrawable" format="reference" />
+        <attr name="kswBackColor" format="color|reference" />
+        <attr name="kswFadeBack" format="boolean" />
+        <attr name="kswBackMeasureRatio" format="float" />
+        <attr name="kswAnimationDuration" format="integer" />
+        <attr name="kswTintColor" format="color|reference" />
+        <attr name="kswTextOn" format="string" />
+        <attr name="kswTextOff" format="string" />
+        <attr name="kswTextMarginH" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundedImageViewEach">
+        <attr name="riv_corner_radius_each" format="dimension" />
+        <attr name="riv_corner_radius_top_left" format="dimension" />
+        <attr name="riv_corner_radius_top_right" format="dimension" />
+        <attr name="riv_corner_radius_bottom_left" format="dimension" />
+        <attr name="riv_corner_radius_bottom_right" format="dimension" />
+        <attr name="riv_border_width_each" format="dimension" />
+        <attr name="riv_border_color_each" format="color" />
+        <attr name="riv_mutate_background_each" format="boolean" />
+        <attr name="riv_oval_each" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="riv_tile_mode_each">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_x_each">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_y_each">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ImageViewEx">
+        <attr name="exiv_default_image_res" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="XMarqueeView">
+        <attr name="isSetAnimDuration" format="boolean" />
+        <attr name="isSingleLine" format="boolean" />
+        <attr name="marquee_count" format="integer" />
+        <attr name="marquee_interval" format="integer|reference" />
+        <attr name="marquee_animDuration" format="integer|reference" />
+        <attr name="marquee_textSize" format="dimension|reference" />
+        <attr name="marquee_textColor" format="color|reference" />
+        <attr name="isFlippingLessCount" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="r_corner_radius_each" format="integer" />
+        <attr name="r_corner_radius_top_left" format="integer" />
+        <attr name="r_corner_radius_top_right" format="integer" />
+        <attr name="r_corner_radius_bottom_left" format="integer" />
+        <attr name="r_corner_radius_bottom_right" format="integer" />
+        <attr name="borderRadius" format="dimension" />
+        <attr name="type">
+            <enum name="circle" value="0" />
+            <enum name="customize" value="1" />
+            <enum name="round" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

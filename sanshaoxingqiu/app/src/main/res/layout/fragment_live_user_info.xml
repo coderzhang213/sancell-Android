@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp"
+            app:layout_behavior=".widget.FixAppBarLayoutBehavior">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_live_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/icon_person_bg_default" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_at_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="44dp"
+                    android:src="@mipmap/icon_user_back"
+                    android:visibility="invisible"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@mipmap/icon_person_more" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_live_bg"
+                    android:layout_marginTop="-50dp"
+                    android:background="@drawable/shape_live_user_top"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:textColor="@color/text_main"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="跟着十七买买买跟着十七买买买跟着十七买买买"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:drawablePadding="5dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_name"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/color_text6"
+                        android:textSize="14sp"
+                        tools:text="ID: 836270" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_copy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_name"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/tv_user_id"
+                        android:background="@drawable/shape_live_user_copy"
+                        android:padding="2dp"
+                        android:text="复制"
+                        android:textColor="@color/color_text6"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_user_id"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/color_text6"
+                        android:textSize="12sp"
+                        android:text="填写个人简介让大家更好的认识你~" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_desc"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_focus_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_text3"
+                            android:textSize="14sp"
+                            tools:text="0关注" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_fans_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_text3"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="24dp"
+                            tools:text="0粉丝" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_like_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:textColor="@color/color_text3"
+                            android:textSize="14sp"
+                            tools:text="0获赞" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_toLeftOf="@+id/tv_modify_info"
+                        android:background="@drawable/shape_live_user_msg"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="#FA1905"
+                        android:textSize="12sp"
+                        android:text="消息" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_modify_info"
+                        android:layout_width="72dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/shape_live_user_modify_info"
+                        android:gravity="center"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+                        android:text="编辑资料" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_head_img"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_alignTop="@+id/rl_info"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="-24dp"
+                    tools:src="@mipmap/icon_logo" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_head_img_living"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iv_head_img"
+                    android:layout_alignBottom="@+id/iv_head_img"
+                    android:src="@mipmap/icon_user_living"
+                    android:visibility="gone"/>
+
+
+            </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_is_live"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_user_is_living"
+                android:visibility="gone"
+                app:layout_scrollFlags="scroll"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_info"
+            android:background="@color/white"
+            android:layout_marginTop="12dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tb_live"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicator="@drawable/shape_user_focus_indicator"
+                app:tabIndicatorColor="@color/text_main"
+                app:tabIndicatorGravity="bottom"
+                app:tabSelectedTextColor="@color/text_main"
+                app:tabTextColor="@color/color_text3"
+                app:tabPaddingBottom="-15dp"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"/>
+        </androidx.viewpager.widget.ViewPager>
+
+        <cn.sancell.xingqiu.widget.LiveUserInfoEmptyView
+            android:id="@+id/live_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout >

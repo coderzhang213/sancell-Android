@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <View
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:background="@color/color_theme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_ordertype"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/tv_ordertype_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_ordertype_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:id="@+id/iv_ordertype_mark"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_top_gopay"
+                android:layout_width="96dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/round_white_20"
+                android:gravity="center"
+                android:text="立即支付"
+                android:textColor="@color/color_theme"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/shape_order_detail_top"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_logisticsinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="24dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_logisticsinfo_mark"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@mipmap/icon_order_package" />
+
+                <TextView
+                    android:id="@+id/tv_logistics_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_logistics_desc"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/iv_logisticsinfo_mark"
+                    android:text="2019.06.22 12:32:48"
+                    android:textColor="@color/color_text3"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/tv_logistics_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/iv_logisticsinfo_mark"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="bold"
+                    tools:text="订单已发货，已从杭州保税仓出库，正在发往上海市正在发往上海市" />
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_toright1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_logisticsinfo"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_order_location" />
+
+                <TextView
+                    android:id="@+id/tv_address_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="bold"
+                    tools:text="方小姐" />
+
+                <TextView
+                    android:id="@+id/tv_address_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_address_name"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/tv_address_name"
+                    android:text="15633337777"
+                    android:textColor="@color/color_text1"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_address_name"
+                    android:layout_alignLeft="@+id/tv_address_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/color_text3"
+                    android:textSize="@dimen/sp_12"
+                    tools:text="上海上海市虹口区水电路1388号晟柏科技园16层水电路1388号晟柏科技园16层" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_modify_adr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_address"
+                    android:layout_alignStart="@+id/tv_address"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/shape_order_modify_adr"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="修改地址"
+                    android:textColor="@color/color_text2"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#F5F7F7" />
+
+        <TextView
+            android:id="@+id/tv_pack_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
+            android:paddingLeft="16dp"
+            android:text="包裹"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/sp_13"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
